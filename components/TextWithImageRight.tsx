@@ -18,17 +18,17 @@ export default function TextWithImageRight({
 }) {
   return (
     <section className="p-padding-section-medium max-w-container-large mx-auto bg-bianco">
-      <div className="flex flex-col md:flex-row items-center gap-12">
+      <div className="flex flex-col md:flex-row items-center gap-5">
         {/* Mobile Title & Price (Mobile: order-1 & order-2) */}
         <div className="w-full md:hidden order-1">
-          <h2 className="font-heading text-5xl text-blu mb-1">{title}</h2>
+          <h2 className="font-heading text-4xl text-blu mb-1">{title}</h2>
         </div>
         <div className="w-full md:hidden order-2">
-          <h3 className="font-heading text-3xl text-blu mb-6 w-full text-left">{price}</h3>
+          <h3 className="font-heading text-2xl text-blu mb-2 w-full text-left">{price}</h3>
         </div>
 
         {/* Content (Desktop: Left, Mobile: order-3) */}
-        <div className="flex-1 order-3 md:order-none">
+        <div className="flex-1 order-3 md:order-none gap-12">
           {/* Desktop Title & Price */}
           <h2 className="hidden md:block font-heading text-5xl text-blu mb-6">{title}</h2>
           <h3 className="hidden md:block font-heading text-3xl text-blu mb-6">{price}</h3>
@@ -46,7 +46,7 @@ export default function TextWithImageRight({
           </ul>
 
           <div className="flex gap-4">
-            <button className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80">Scopri</button>
+            <button className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 hover:cursor-pointer">Scopri</button>
             <a href="#" className="flex items-center text-blu font-semibold px-4 py-3 rounded transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
           </div>
         </div>
