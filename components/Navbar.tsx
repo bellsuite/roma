@@ -1,0 +1,77 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import LanguageIcon from "./icons/LanguageIcon";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="relative z-50 flex items-center px-padding-global py-4 bg-blu text-bianco">
+      <div className="w-[144px]">
+        <Image src="/logo.svg" alt="Bell Suites Logo" width={144} height={48} />
+      </div>
+
+      {/* Desktop Menu */}
+      <div className="hidden lg:flex items-center justify-start gap-8 font-semibold text-[18px] ml-16">
+        <a href="#" className="hover:bg-white/20 p-2 rounded transition-colors duration-150">Home</a>
+
+        <div className="relative group cursor-pointer p-2">
+          <span className="group-hover:bg-white/20 p-2 rounded flex items-center gap-2 transition-colors duration-150">
+            The suites
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </span>
+          <div className="absolute left-0 mt-2 w-48 bg-blu text-bianco hidden group-hover:block p-2 z-[60] shadow-lg rounded-lg">
+            <a href="#" className="block hover:bg-white/20 p-2 rounded mb-1 transition-colors duration-150">Suites 1</a>
+            <a href="#" className="hover:bg-white/20 p-2 rounded block transition-colors duration-150">Suites 2</a>
+          </div>
+        </div>
+
+        <a href="#" className="hover:bg-white/20 p-2 rounded transition-colors duration-150">San Giovanni</a>
+      </div>
+
+      <div className="ml-auto flex items-center gap-4">
+        {/* Language Dropdown */}
+        <div className="hidden lg:block relative group cursor-pointer p-2">
+          <span className="group-hover:bg-white/20 p-2 rounded flex items-center gap-2 transition-colors duration-150">
+            <LanguageIcon className="w-5 h-5" />
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </span>
+          <div className="absolute right-0 mt-2 w-max bg-blu text-bianco hidden group-hover:block p-2 z-[60] shadow-lg rounded-lg">
+            <button className="block hover:bg-white/20 p-2 rounded mb-1 transition-colors duration-150 w-full text-left" aria-label="English">🇬🇧</button>
+            <button className="block hover:bg-white/20 p-2 rounded mb-1 transition-colors duration-150 w-full text-left" aria-label="Italiano">🇮🇹</button>
+            <button className="block hover:bg-white/20 p-2 rounded mb-1 transition-colors duration-150 w-full text-left" aria-label="Deutsch">🇩🇪</button>
+            <button className="block hover:bg-white/20 p-2 rounded transition-colors duration-150 w-full text-left" aria-label="Español">🇪🇸</button>
+          </div>
+        </div>
+
+        {/* Burger Button */}
+        <button className="lg:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 w-full bg-blu p-padding-global lg:hidden flex flex-col gap-4 z-[50]">
+          <a href="#" className="p-2 border-b border-white/10">Home</a>
+          <a href="#" className="p-2 border-b border-white/10">The suites</a>
+          <a href="#" className="p-2 border-b border-white/10">San Giovanni</a>
+          <div className="flex gap-4 p-2">
+            <span>🇬🇧</span>
+            <span>🇮🇹</span>
+            <span>🇩🇪</span>
+            <span>🇪🇸</span>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
