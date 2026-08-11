@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="relative z-10">
         <h1 className="font-heading text-6xl mb-6">Bell Suites Rome, eleganza e<br />comfort nel cuore di Roma</h1>
         <p className="text-xl mb-8 max-w-2xl">Scopri Bell Suites Rome, nuovissima struttura boutique inaugurata nel 2026: due eleganti suite di design da 45 mq, completamente ristrutturate, in una delle zone più comode e ben collegate della capitale.</p>
-        <button className="bg-bianco text-blu px-8 py-3 font-semibold cursor-pointer transition-colors duration-150 hover:bg-bianco/70 hover:text-blu">Scopri</button>
+        <button className="bg-bianco text-blu px-8 py-3 font-semibold cursor-pointer transition-colors duration-150 hover:bg-bianco/80 hover:text-blu">Scopri</button>
       </div>
     </section>
   );
