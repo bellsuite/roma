@@ -9,8 +9,8 @@ export default function Navbar() {
 
   return (
     <nav className="relative z-50 flex items-center px-padding-global py-4 bg-blu text-bianco">
-      <div className="w-[144px]">
-        <Image src="/logo.svg" alt="Bell Suites Logo" width={144} height={48} />
+      <div className="relative w-[144px] h-[48px]">
+        <Image src="/logo.svg" alt="Bell Suites Logo" fill style={{ objectFit: "contain" }} />
       </div>
 
       {/* Desktop Menu */}
