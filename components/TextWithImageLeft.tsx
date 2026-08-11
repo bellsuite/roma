@@ -29,7 +29,7 @@ export default function TextWithImageLeft({
 
         {/* Image (Desktop: Left, Mobile: order-3) */}
         <div className="w-full md:flex-1 flex justify-center md:justify-start order-3 md:order-none">
-          <div className="relative w-full max-w-[500px] aspect-square rounded-full overflow-hidden border-2 border-oro p-[5px]">
+          <div className="relative w-full max-w-[500px] aspect-square rounded-full overflow-hidden border-1 border-oro p-[4px]">
             <div className="w-full h-full rounded-full overflow-hidden">
               <Image src={imageSrc} alt={imageAlt} width={500} height={500} className="w-full h-full object-cover" />
             </div>
@@ -44,7 +44,7 @@ export default function TextWithImageLeft({
           
           <p className="text-grigio-scuro mb-6 text-base">{description}</p>
 
-          <h3 className="font-heading text-2xl text-oro mb-4">Alcune dotazioni della suite:</h3>
+          <h3 className="font-heading text-2xl text-oro-scuro mb-4">Alcune dotazioni della suite:</h3>
           <ul className="mb-8">
             {features.map((feature, index) => (
               <li key={index} className="flex items-center gap-3 mb-2 text-grigio-scuro text-base">
