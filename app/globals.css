@@ -26,6 +26,8 @@
   --spacing-padding-section-medium: 80px;
   --spacing-padding-section-small: 48px;
 
+  --width-container-large: 1024px;
+
   --radius-large: 8px;
   --radius-medium: 8px;
   --radius-small: 8px;
@@ -42,6 +44,12 @@
       padding-right: 64px;
     }
   }
+  .max-w-container-large {
+    max-width: 1200px;
+  }
+  .max-w-container-medium {
+    max-width: 900px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,8 +60,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-bianco);
+  color: var(--color-grigio-scuro);
   font-family: var(--font-body);
 }
 

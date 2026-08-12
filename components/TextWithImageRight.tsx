@@ -19,8 +19,8 @@ export default function TextWithImageRight({
   priority?: boolean;
 }) {
   return (
-    <section className="p-padding-global max-w-container-large mx-auto bg-bianco">
-      <div className="flex flex-col md:flex-row items-center gap-5">
+    <section className="px-padding-global bg-bianco">
+      <div className="max-w-container-large mx-auto py-16 flex flex-col md:flex-row items-center gap-5">
         {/* Mobile Title & Price (Mobile: order-1 & order-2) */}
         <div className="w-full md:hidden order-1">
           <h2 className="font-heading text-4xl text-blu mb-1">{title}</h2>

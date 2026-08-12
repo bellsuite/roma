@@ -17,8 +17,8 @@ export default function TextWithImageLeft({
   imageAlt: string;
 }) {
   return (
-    <section className="p-padding-global max-w-container-large mx-auto bg-bianco">
-      <div className="flex flex-col md:flex-row items-center gap-12">
+    <section className="px-padding-global bg-bianco">
+      <div className="max-w-container-large mx-auto py-16 flex flex-col md:flex-row items-center gap-12">
         {/* Mobile Title & Price (Mobile: order-1 & order-2) */}
         <div className="w-full md:hidden order-1">
           <h2 className="font-heading text-5xl text-blu mb-1">{title}</h2>
@@ -27,8 +27,8 @@ export default function TextWithImageLeft({
           <h3 className="font-heading text-3xl text-blu mb-6 w-full text-left">{price}</h3>
         </div>
 
-        {/* Image (Desktop: Left, Mobile: order-3) */}
-        <div className="w-full md:flex-1 flex justify-center md:justify-start order-3 md:order-none">
+        {/* Image (Desktop: Left, Mobile: order-4) */}
+        <div className="w-full md:flex-1 flex justify-center md:justify-start order-4 md:order-none">
           <div className="relative w-full max-w-[500px] aspect-square rounded-full overflow-hidden border-1 border-oro p-[4px]">
             <div className="w-full h-full rounded-full overflow-hidden">
               <Image src={imageSrc} alt={imageAlt} width={500} height={500} className="w-full h-full object-cover" />
@@ -36,8 +36,8 @@ export default function TextWithImageLeft({
           </div>
         </div>
 
-        {/* Content (Desktop: Right, Mobile: order-4) */}
-        <div className="flex-1 order-4 md:order-none">
+        {/* Content (Desktop: Right, Mobile: order-3) */}
+        <div className="flex-1 order-3 md:order-none">
           {/* Desktop Title & Price */}
           <h2 className="hidden md:block font-heading text-5xl text-blu mb-6">{title}</h2>
           <h3 className="hidden md:block font-heading text-3xl text-blu mb-6">{price}</h3>

@@ -29,10 +29,11 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="p-padding-global bg-bianco">
-      <div className="max-w-container-large mx-auto">
+    <section className="px-padding-global bg-bianco">
+      <div className="max-w-container-medium mx-auto">
         <h2 className="font-heading text-5xl text-blu mb-2">Contattaci</h2>
         <p className="text-grigio-scuro mb-10 text-lg max-w-xl">
+
           Vuoi conoscere la disponibilità delle nostre 2 suite nel periodo che ti interessa?
           <br />
           Lasciaci i tuoi dati: ti ricontatteremo al più presto.
@@ -44,7 +45,7 @@ export default function ContactForm() {
             <p>Ti risponderemo il prima possibile.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 mb-20">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex flex-col">
                 <label htmlFor="firstName" className="text-blu font-semibold text-sm mb-1">First name</label>
@@ -54,7 +55,7 @@ export default function ContactForm() {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro"
+                  className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro text-grigio-scuro placeholder:text-grigio-scuro"
                   required
                 />
               </div>
@@ -66,7 +67,7 @@ export default function ContactForm() {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro"
+                  className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro text-grigio-scuro placeholder:text-grigio-scuro"
                   required
                 />
               </div>
@@ -78,7 +79,7 @@ export default function ContactForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro"
+                  className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro text-grigio-scuro placeholder:text-grigio-scuro"
                   required
                 />
               </div>
@@ -90,7 +91,7 @@ export default function ContactForm() {
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro"
+                  className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro text-grigio-scuro placeholder:text-grigio-scuro"
                   required
                 />
               </div>
@@ -121,7 +122,7 @@ export default function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}
-                className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro"
+                className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro text-grigio-scuro placeholder:text-grigio-scuro"
                 placeholder="Type your message..."
                 required
               ></textarea>
