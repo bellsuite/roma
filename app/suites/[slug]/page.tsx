@@ -23,7 +23,7 @@ const suitesData: { [key: string]: { name: string; photos: string[] } } = {
   },
 };
 
-export default async function SuitePage({ params }: { params: { slug: string } }) {
+export default async function SuitePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const suite = suitesData[slug];
 
