@@ -46,8 +46,8 @@ export default function TextWithImageRight({
           </ul>
 
           <div className="flex gap-4">
-            <button className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 hover:cursor-pointer">Scopri</button>
-            <a href="#" className="flex items-center text-blu font-semibold px-4 py-3 rounded transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
+            <button className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 hover:cursor-pointer rounded-md">Scopri</button>
+            <a href="#" className="flex items-center text-blu font-semibold px-4 py-3 rounded-md transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
           </div>
         </div>
 

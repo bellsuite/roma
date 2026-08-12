@@ -26,9 +26,9 @@
   --spacing-padding-section-medium: 80px;
   --spacing-padding-section-small: 48px;
 
-  --radius-large: 0px;
-  --radius-medium: 0px;
-  --radius-small: 0px;
+  --radius-large: 8px;
+  --radius-medium: 8px;
+  --radius-small: 8px;
 }
 
 @media (prefers-color-scheme: dark) {

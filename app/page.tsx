@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import TextWithImageRight from "@/components/TextWithImageRight";
 import TextWithImageLeft from "@/components/TextWithImageLeft";
 import Separator from "@/components/Separator";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -36,6 +38,8 @@ export default function Home() {
         imageSrc="/foto-suites/suite-2/_MG_8945.avif"
         imageAlt="Suite 2"
       />
+      <ContactForm />
+      <Footer />
     </main>
   );
 }
