@@ -13,11 +13,11 @@ export default function Footer() {
           <div className="col-span-1"></div>
           
           <div className="col-span-1">
-            <h4 className="font-semibold text-lg mb-6">Apartments</h4>
+            <h4 className="font-semibold text-lg mb-6">Suites</h4>
             <ul className="space-y-4 text-bianco/80">
-              <li><a href="#" className="hover:text-bianco">Apartment One</a></li>
-              <li><a href="#" className="hover:text-bianco">Apartment Two</a></li>
-              <li><a href="#" className="hover:text-bianco">Book now</a></li>
+              <li><a href="/suites/suite-1" className="hover:text-bianco">Suite 1</a></li>
+              <li><a href="/suites/suite-2" className="hover:text-bianco">Suite 2</a></li>
+              <li><a href="#contact-form" className="hover:text-bianco">Book now</a></li>
             </ul>
           </div>
 

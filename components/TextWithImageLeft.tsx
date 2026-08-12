@@ -8,6 +8,7 @@ export default function TextWithImageLeft({
   features,
   imageSrc,
   imageAlt,
+  suitePath,
 }: {
   title: string;
   price: string;
@@ -15,6 +16,7 @@ export default function TextWithImageLeft({
   features: { text: string; icon: string }[];
   imageSrc: string;
   imageAlt: string;
+  suitePath: string;
 }) {
   return (
     <section className="px-padding-global bg-bianco">
@@ -57,7 +59,7 @@ export default function TextWithImageLeft({
           </ul>
 
           <div className="flex gap-4">
-            <button className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 rounded-md">Scopri</button>
+            <a href={suitePath} className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 rounded-md">Scopri</a>
             <a href="#contact-form" className="flex items-center text-blu font-semibold px-4 py-3 rounded-md transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
           </div>
         </div>
