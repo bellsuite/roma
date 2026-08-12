@@ -29,9 +29,9 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="px-padding-global bg-bianco">
+    <section id="contact-form" className="px-padding-global bg-bianco">
       <div className="max-w-container-medium mx-auto">
-        <h2 className="font-heading text-5xl text-blu mb-2">Contattaci</h2>
+        <h2 className="font-heading text-4xl md:text-5xl text-blu mb-2">Contattaci</h2>
         <p className="text-grigio-scuro mb-10 text-lg max-w-xl">
 
           Vuoi conoscere la disponibilità delle nostre 2 suite nel periodo che ti interessa?

@@ -36,7 +36,7 @@ export default async function SuitePage({ params }: { params: Promise<{ slug: st
       <Navbar />
       
       <section className="px-padding-global py-16 text-center">
-        <h1 className="font-heading text-5xl text-blu mb-8">A Roman suites with a taste of the dolce vita</h1>
+        <h1 className="font-heading text-4xl md:text-5xl text-blu mb-8">A Roman suites with a taste of the dolce vita</h1>
         
         <div className="flex justify-center gap-4 mb-16">
           <a href="/suites/suite-1" className={`px-8 py-3 rounded-md ${slug === 'suite-1' ? 'bg-blu text-bianco' : 'bg-grigio-chiarissimo text-blu'}`}>Suite 1</a>
