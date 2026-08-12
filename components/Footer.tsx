@@ -6,9 +6,8 @@ export default function Footer() {
       <div className="max-w-container-large mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-1">
-            <Image src="/logo.svg" alt="Bell Suites Logo" width={144} height={48} className="brightness-0 invert" />
-          </div>
-          
+            <img src="/logo.svg" alt="Bell Suites Logo" className="w-[144px] h-auto object-contain" />
+          </div>          
           <div>
             <h4 className="font-semibold text-lg mb-6">Apartments</h4>
             <ul className="space-y-4 text-bianco/80">

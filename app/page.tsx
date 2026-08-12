@@ -12,6 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TextWithImageRight 
+        priority
         title="Suite one, a quiet refuge"
         price="160 EUR a notte"
         description="La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite)."

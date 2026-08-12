@@ -8,6 +8,7 @@ export default function TextWithImageRight({
   features,
   imageSrc,
   imageAlt,
+  priority = false,
 }: {
   title: string;
   price: string;
@@ -15,6 +16,7 @@ export default function TextWithImageRight({
   features: { text: string; icon: string }[];
   imageSrc: string;
   imageAlt: string;
+  priority?: boolean;
 }) {
   return (
     <section className="p-padding-section-medium max-w-container-large mx-auto bg-bianco">
@@ -55,7 +57,7 @@ export default function TextWithImageRight({
         <div className="w-full md:flex-1 flex justify-center md:justify-end order-4 md:order-none">
           <div className="relative w-full max-w-[500px] aspect-square rounded-full overflow-hidden border-1 border-oro p-[4px]">
             <div className="w-full h-full rounded-full overflow-hidden">
-              <Image src={imageSrc} alt={imageAlt} width={500} height={500} className="w-full h-full object-cover" />
+              <Image src={imageSrc} alt={imageAlt} width={500} height={500} priority={priority} className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

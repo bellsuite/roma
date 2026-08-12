@@ -43,21 +43,35 @@ export default async function SuitePage({ params }: { params: { slug: string } }
           <a href="/suites/suite-2" className={`px-8 py-3 rounded-md ${slug === 'suite-2' ? 'bg-blu text-bianco' : 'bg-grigio-chiarissimo text-blu'}`}>Suite 2 {'>'}</a>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 max-w-container-large mx-auto">
+
+        <div className="grid md:grid-cols-2 md:grid-rows-2 gap-4 max-w-container-large mx-auto">
           {/* Main Large Photo */}
-          <div className="md:row-span-2 relative aspect-[3/4] md:aspect-auto md:h-full rounded-md overflow-hidden">
-            <Image src={suite.photos[0]} alt={suite.name} fill className="object-cover" />
+          <div className="relative aspect-[3/4] md:aspect-auto md:row-span-2 rounded-md overflow-hidden">
+            <Image 
+              src={suite.photos[0]} 
+              alt={suite.name} 
+              fill 
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover" 
+            />
           </div>
           
           {/* Smaller Photos */}
-          <div className="grid grid-cols-1 gap-4">
-            {suite.photos.slice(1, 3).map((photo, index) => (
-              <div key={index} className="relative aspect-video rounded-md overflow-hidden">
-                <Image src={photo} alt={`${suite.name} ${index + 2}`} fill className="object-cover" />
-              </div>
-            ))}
-          </div>
+          {suite.photos.slice(1, 3).map((photo, index) => (
+            <div key={index} className="relative aspect-video rounded-md overflow-hidden">
+              <Image 
+                src={photo} 
+                alt={`${suite.name} ${index + 2}`} 
+                fill 
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover" 
+              />
+            </div>
+          ))}
         </div>
+
+
       </section>
 
       <Footer />

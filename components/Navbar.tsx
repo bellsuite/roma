@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="relative z-50 flex items-center px-padding-global py-4 bg-blu text-bianco">
       <div className="relative w-[144px] h-[48px]">
-        <Image src="/logo.svg" alt="Bell Suites Logo" fill style={{ objectFit: "contain" }} />
+        <img src="/logo.svg" alt="Bell Suites Logo" className=" w-[144px] h-[48px] object-contain" />
       </div>
 
       {/* Desktop Menu */}
@@ -21,7 +21,7 @@ export default function Navbar() {
           <span className="group-hover:bg-white/20 p-2 rounded-md flex items-center gap-2 transition-colors duration-150">
             The suites
             <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </span>
           <div className="absolute left-0 mt-2 w-48 bg-blu text-bianco hidden group-hover:block p-2 z-[60] shadow-lg rounded-md">
@@ -39,7 +39,7 @@ export default function Navbar() {
           <span className="group-hover:bg-white/20 p-2 rounded flex items-center gap-2 transition-colors duration-150">
             <LanguageIcon className="w-5 h-5" />
             <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </span>
           <div className="absolute right-0 mt-2 w-max bg-blu text-bianco hidden group-hover:block p-2 z-[60] shadow-lg rounded-lg">
