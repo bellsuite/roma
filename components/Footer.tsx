@@ -4,20 +4,24 @@ export default function Footer() {
   return (
     <footer className="bg-blu text-bianco px-padding-global py-16">
       <div className="max-w-container-large mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-12 mb-16">
+          {/* Logo Column */}
+          <div className="col-span-1">
             <img src="/logo.svg" alt="Bell Suites Logo" className="w-[144px] h-auto object-contain" />
-          </div>          
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Apartments</h4>
+          </div>
+          {/* Empty Column for Mobile */}
+          <div className="col-span-1"></div>
+          
+          <div className="col-span-1">
+            <h4 className="font-semibold text-lg mb-6">Suites</h4>
             <ul className="space-y-4 text-bianco/80">
-              <li><a href="#" className="hover:text-bianco">Apartment One</a></li>
-              <li><a href="#" className="hover:text-bianco">Apartment Two</a></li>
-              <li><a href="#" className="hover:text-bianco">Book now</a></li>
+              <li><a href="/suites/suite-1" className="hover:text-bianco">Suite 1</a></li>
+              <li><a href="/suites/suite-2" className="hover:text-bianco">Suite 2</a></li>
+              <li><a href="#contact-form" className="hover:text-bianco">Book now</a></li>
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-1">
             <h4 className="font-semibold text-lg mb-6">The area</h4>
             <ul className="space-y-4 text-bianco/80">
               <li><a href="#" className="hover:text-bianco">San Giovanni</a></li>
@@ -26,7 +30,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-1">
             <h4 className="font-semibold text-lg mb-6">Legal</h4>
             <ul className="space-y-4 text-bianco/80">
               <li><a href="#" className="hover:text-bianco">Privacy</a></li>
@@ -37,7 +41,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-1">
             <h4 className="font-semibold text-lg mb-6">Follow us</h4>
             <ul className="space-y-4 text-bianco/80">
               <li><a href="#" className="hover:text-bianco">Instagram</a></li>

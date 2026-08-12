@@ -95,7 +95,8 @@
 
 | Token | Desktop | Mobile |
 | ------ | ------ | ------ |
-| `Container/container-large` | 1280px | 1280px |
+| Container/container-large | 1200px | 1200px |
+
 | `Container/container-medium` | 1024px | 1024px |
 | `Container/container-small` | 768px | 768px |
 | `Max Width/max-width-large` | 768px | 768px |

@@ -26,9 +26,30 @@
   --spacing-padding-section-medium: 80px;
   --spacing-padding-section-small: 48px;
 
+  --width-container-large: 1024px;
+
   --radius-large: 8px;
   --radius-medium: 8px;
   --radius-small: 8px;
+}
+
+@layer utilities {
+  .px-padding-global, .p-padding-global {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media (min-width: 768px) {
+    .px-padding-global, .p-padding-global {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+  }
+  .max-w-container-large {
+    max-width: 1200px;
+  }
+  .max-w-container-medium {
+    max-width: 900px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,11 +60,15 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-bianco);
+  color: var(--color-grigio-scuro);
   font-family: var(--font-body);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+html {
+  scroll-behavior: smooth;
 }

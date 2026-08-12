@@ -1,6 +1,6 @@
 export default function Separator() {
   return (
-    <div className="py-16 bg-bianco flex items-center justify-center gap-3 px-padding-global">
+    <div className="py-2 md:py-15 bg-bianco flex items-center justify-center gap-3 px-padding-global">
       {/* Left Decoration */}
       <img src="/decor.svg" alt="Decoration Left" className="w-12 h-auto text-oro" />
       

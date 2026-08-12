@@ -24,6 +24,7 @@ export default function Home() {
         ]}
         imageSrc="/foto-suites/suite-1/_MG_8939.avif"
         imageAlt="Suite 1"
+        suitePath="/suites/suite-1"
       />
       <Separator />
       <TextWithImageLeft 
@@ -38,7 +39,9 @@ export default function Home() {
         ]}
         imageSrc="/foto-suites/suite-2/_MG_8945.avif"
         imageAlt="Suite 2"
+        suitePath="/suites/suite-2"
       />
+      <Separator />
       <ContactForm />
       <Footer />
     </main>
