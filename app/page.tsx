@@ -41,6 +41,7 @@ export default function Home() {
         imageAlt="Suite 2"
         suitePath="/suites/suite-2"
       />
+      <Separator />
       <ContactForm />
       <Footer />
     </main>
