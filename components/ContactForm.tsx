@@ -29,7 +29,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="px-padding-global py-padding-section-medium bg-bianco">
+    <section className="p-padding-global bg-bianco">
       <div className="max-w-container-large mx-auto">
         <h2 className="font-heading text-5xl text-blu mb-2">Contattaci</h2>
         <p className="text-grigio-scuro mb-10 text-lg max-w-xl">

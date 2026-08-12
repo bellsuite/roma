@@ -19,7 +19,7 @@ export default function TextWithImageRight({
   priority?: boolean;
 }) {
   return (
-    <section className="p-padding-section-medium max-w-container-large mx-auto bg-bianco">
+    <section className="p-padding-global max-w-container-large mx-auto bg-bianco">
       <div className="flex flex-col md:flex-row items-center gap-5">
         {/* Mobile Title & Price (Mobile: order-1 & order-2) */}
         <div className="w-full md:hidden order-1">

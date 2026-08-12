@@ -31,6 +31,19 @@
   --radius-small: 8px;
 }
 
+@layer utilities {
+  .px-padding-global, .p-padding-global {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media (min-width: 768px) {
+    .px-padding-global, .p-padding-global {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
