@@ -23,10 +23,10 @@ export default function TextWithImageLeft({
       <div className="max-w-container-large mx-auto py-16 flex flex-col md:flex-row items-center gap-12">
         {/* Mobile Title & Price (Mobile: order-1 & order-2) */}
         <div className="w-full md:hidden order-1">
-          <h2 className="font-heading text-4xl md:text-5xl text-blu mb-1">{title}</h2>
+          <h2 className="font-heading text-3xl md:text-5xl text-blu mb-1">{title}</h2>
         </div>
         <div className="w-full md:hidden order-2">
-          <h3 className="font-heading text-3xl text-blu mb-6 w-full text-left">{price}</h3>
+          <h3 className="font-heading text-2xl text-blu mb-6 w-full text-left">{price}</h3>
         </div>
 
         {/* Image (Desktop: Left, Mobile: order-4) */}
