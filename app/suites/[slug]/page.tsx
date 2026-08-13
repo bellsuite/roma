@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import Separator from "@/components/Separator";
+import SuitesGeneralDescription from "@/components/SuitesGeneralDescription";
+import SuiteAmenities from "@/components/SuiteAmenities";
+import ContactForm from "@/components/ContactForm";
+import Voucher from "@/components/Voucher";
+import PointsOfInterest from "@/components/PointsOfInterest";
 import Footer from "@/components/Footer";
-
 const suitesData: { [key: string]: { name: string; photos: string[] } } = {
   "suite-1": {
     name: "Suite 1",
@@ -70,10 +75,14 @@ export default async function SuitePage({ params }: { params: Promise<{ slug: st
             </div>
           ))}
         </div>
-
-
       </section>
 
+      <SuitesGeneralDescription />
+      <SuiteAmenities />
+      <Separator />
+      <Voucher />
+      <PointsOfInterest />
+      <ContactForm />      
       <Footer />
     </main>
   );
