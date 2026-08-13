@@ -10,10 +10,10 @@ export default function Footer() {
             <img src="/logo.svg" alt="Bell Suites Logo" className="w-[144px] h-auto object-contain" />
           </div>
           {/* Empty Column for Mobile */}
-          <div className="col-span-1"></div>
+          <div className="col-span-1 block md:hidden"></div>
           
           <div className="col-span-1">
-            <h4 className="font-semibold text-lg mb-6">Suites</h4>
+            <h4 className="font-body font-semibold text-lg mb-6">Suites</h4>
             <ul className="space-y-4 text-bianco/80">
               <li><a href="/suites/suite-1" className="hover:text-bianco">Suite 1</a></li>
               <li><a href="/suites/suite-2" className="hover:text-bianco">Suite 2</a></li>
@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           <div className="col-span-1">
-            <h4 className="font-semibold text-lg mb-6">The area</h4>
+            <h4 className="font-body font-semibold text-lg mb-6">The area</h4>
             <ul className="space-y-4 text-bianco/80">
               <li><a href="#" className="hover:text-bianco">San Giovanni</a></li>
               <li><a href="#" className="hover:text-bianco">Restaurants</a></li>
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
 
           <div className="col-span-1">
-            <h4 className="font-semibold text-lg mb-6">Legal</h4>
+            <h4 className="font-body font-semibold text-lg mb-6">Legal</h4>
             <ul className="space-y-4 text-bianco/80">
               <li><a href="#" className="hover:text-bianco">Privacy</a></li>
               <li><a href="#" className="hover:text-bianco">Cookies</a></li>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           <div className="col-span-1">
-            <h4 className="font-semibold text-lg mb-6">Follow us</h4>
+            <h4 className="font-body font-semibold text-lg mb-6">Follow us</h4>
             <ul className="space-y-4 text-bianco/80">
               <li><a href="#" className="hover:text-bianco">Instagram</a></li>
               <li><a href="#" className="hover:text-bianco">Facebook</a></li>
