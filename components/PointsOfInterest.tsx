@@ -2,11 +2,11 @@ import React from 'react';
 
 const points = [
   { number: '2', description: 'Minuti a piedi dalla pasticceria Pompi' },
-  { number: '15', description: 'Minuti di cammino da Piazza Navona' },
-  { number: '4', description: 'Metropolitana Linea A fermata Re di Roma' },
-  { number: '5', description: 'Minuti per il Colosseo in taxi' },
-  { number: '10', description: 'Minuti dal parco di Villa Borghese' },
-  { number: '15', description: 'Minuti dalla Basilica di San Pietro' },
+  { number: '15', description: 'Minuti a piedi dal Colosseo' },
+  { number: '4', description: 'Minuti a piedi dalla fermata della metropolitana Re di Roma' },
+  { number: '5', description: 'Fermate di metropolitana per raggiungere Piazza di Spagna' },
+  { number: '10', description: 'Minuti a piedi dalla Basilica di San Giovanni in Laterano' },
+  { number: '15', description: 'Minuti a piedi dalla Basilica di Santa Maria Maggiore' },
 ];
 
 export default function PointsOfInterest() {
@@ -23,7 +23,7 @@ export default function PointsOfInterest() {
     </div>
 
       <div className="relative z-10 max-w-container-large mx-auto py-24">
-        <h2 className="text-3xl md:text-5xl font-sans text-white mb-16 text-center">
+        <h2 className="text-3xl md:text-5xl font-sans text-white mb-16">
           Punti di interesse nelle vicinanze
         </h2>
         
@@ -31,10 +31,10 @@ export default function PointsOfInterest() {
           {points.map((point, index) => (
             <div key={index} className="flex items-start pl-6 border-l border-white">
               <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-xs py-4">
-                <span className="text-6xl md:text-7xl font-heading text-white mb-4">
+                <span className="text-6xl md:text-8xl font-heading text-white mb-4">
                   {point.number}
                 </span>
-                <p className="text-lg md:text-xl font-light text-white leading-relaxed">
+                <p className="text-lg md:text-xl font-heading font-semibold text-white leading-relaxed">
                   {point.description}
                 </p>
               </div>

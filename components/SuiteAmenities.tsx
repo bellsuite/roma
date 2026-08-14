@@ -34,7 +34,7 @@ export default function SuiteAmenities() {
           {columns.map((column, colIndex) => (
             <div key={colIndex} className="flex flex-col gap-6 py-3">
               {column.map((amenity, index) => (
-                <div key={index} className="flex items-center gap-4 text-grigio-scuro text-base">
+                <div key={index} className="flex items-center gap-4 text-grigio-scurissimo text-base">
                   <div className="flex-shrink-0 flex items-center justify-center w-8">
                     <FeatureIcon name={amenity.icon} className="text-oro" />
                   </div>
