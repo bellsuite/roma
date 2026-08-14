@@ -13,32 +13,32 @@ export default function Home() {
       <Hero />
       <TextWithImageRight 
         priority
-        title="Suite one, a quiet refuge"
+        title="Suite Uno, un rifugio tranquillo"
         price="160 EUR a notte"
         description="La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite)."
         features={[
-          { text: "Rainfall showers and marble bathrooms", icon: "shower" },
-          { text: "A fully equipped kitchen with a espresso machine", icon: "kitchen" },
+          { text: "Docce a pioggia e bagni in marmo", icon: "shower" },
+          { text: "Una cucina completamente attrezzata con macchina per espresso", icon: "kitchen" },
           { text: "Connessione Wi-Fi in fibra ottica ultra veloce (2,5 Gbps)", icon: "wifi" },
           { text: "Aria condizionata", icon: "climate" }
         ]}
         imageSrc="/foto-suites/suite-1/_MG_8939.avif"
-        imageAlt="Suite 1"
+        imageAlt="Suite Uno"
         suitePath="/suites/suite-1"
       />
       <Separator />
       <TextWithImageLeft 
-        title="Suite two, a modern sanctuary"
+        title="Suite Due, un santuario moderno"
         price="175 EUR a notte"
         description="La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite)."
         features={[
-          { text: "Rainfall showers and marble bathrooms", icon: "shower" },
-          { text: "A fully equipped kitchen with a espresso machine", icon: "kitchen" },
+          { text: "Docce a pioggia e bagni in marmo", icon: "shower" },
+          { text: "Una cucina completamente attrezzata con macchina per espresso", icon: "kitchen" },
           { text: "Connessione Wi-Fi in fibra ottica ultra veloce (2,5 Gbps)", icon: "wifi" },
           { text: "Aria condizionata", icon: "climate" }
         ]}
         imageSrc="/foto-suites/suite-2/_MG_8945.avif"
-        imageAlt="Suite 2"
+        imageAlt="Suite Due"
         suitePath="/suites/suite-2"
       />
       <Separator />

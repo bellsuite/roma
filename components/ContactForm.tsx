@@ -48,7 +48,7 @@ export default function ContactForm() {
           <form onSubmit={handleSubmit} className="space-y-6 mb-20">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex flex-col">
-                <label htmlFor="firstName" className="text-blu font-semibold text-sm mb-1">First name</label>
+                <label htmlFor="firstName" className="text-blu font-semibold text-sm mb-1">Nome</label>
                 <input
                   type="text"
                   id="firstName"
@@ -60,7 +60,7 @@ export default function ContactForm() {
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="lastName" className="text-blu font-semibold text-sm mb-1">Last name</label>
+                <label htmlFor="lastName" className="text-blu font-semibold text-sm mb-1">Cognome</label>
                 <input
                   type="text"
                   id="lastName"
@@ -84,7 +84,7 @@ export default function ContactForm() {
                 />
               </div>
               <div className="flex flex-col">
-                <label htmlFor="phoneNumber" className="text-blu font-semibold text-sm mb-1">Phone number</label>
+                <label htmlFor="phoneNumber" className="text-blu font-semibold text-sm mb-1">Numero di telefono</label>
                 <input
                   type="tel"
                   id="phoneNumber"
@@ -107,15 +107,15 @@ export default function ContactForm() {
                 className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro text-grigio-scuro"
                 required
               >
-                <option value="">Select one...</option>
-                <option value="suite1">Suite 1</option>
-                <option value="suite2">Suite 2</option>
-                <option value="both">Both</option>
+                <option value="">Seleziona...</option>
+                <option value="suite1">Suite Uno</option>
+                <option value="suite2">Suite Due</option>
+                <option value="both">Entrambe</option>
               </select>
             </div>
 
             <div className="flex flex-col">
-              <label htmlFor="message" className="text-blu font-semibold text-sm mb-1">Message</label>
+              <label htmlFor="message" className="text-blu font-semibold text-sm mb-1">Messaggio</label>
               <textarea
                 id="message"
                 name="message"
@@ -123,7 +123,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 rows={6}
                 className="w-full border border-oro/60 p-3 rounded-md bg-bianco focus:outline-none focus:border-oro text-grigio-scuro placeholder:text-grigio-scuro"
-                placeholder="Type your message..."
+                placeholder="Scrivi qui il tuo messaggio..."
                 required
               ></textarea>
             </div>
@@ -139,7 +139,7 @@ export default function ContactForm() {
                 required
               />
               <label htmlFor="acceptTerms" className="text-grigio-scuro text-sm">
-                I accept the <a href="#" className="text-blu underline">Terms</a>
+                Accetto i <a href="#" className="text-blu underline">Termini</a>
               </label>
             </div>
 

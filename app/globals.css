@@ -21,6 +21,9 @@
   --font-heading: var(--font-fraunces);
   --font-body: var(--font-public-sans);
 
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
   --spacing-padding-global: 64px;
   --spacing-padding-section-large: 112px;
   --spacing-padding-section-medium: 80px;
@@ -52,10 +55,10 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #183058;
   }
 }
 

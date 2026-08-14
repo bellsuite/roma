@@ -1,8 +1,14 @@
-# Registro Modifiche (Ultimo Commit)
+# Registro Modifiche (Ultimo Stato)
 
-## Dettagli Commit
-- **Commit:** 0ec3d44
-- **Messaggio:** Riduci le dimensioni del titolo e del prezzo nei componenti TextWithImageLeft per migliorare la coerenza visiva
+## Dettagli Stato
+- **Commit ID:** 524aea4 (aggiornato con traduzioni)
+- **Data:** 14 Agosto 2026
 
 ## Sintesi Modifiche
-- **`components/TextWithImageLeft.tsx`**: Ridotte le dimensioni dei font per i titoli e i prezzi nella versione mobile, per migliorare l'equilibrio visivo.
+- **Traduzione Interfaccia:** Completata la traduzione in lingua italiana di:
+  - `app/page.tsx` (Homepage)
+  - `app/suites/[slug]/page.tsx` (Pagina dettaglio suite)
+- **Aggiornamenti Componenti:** Modifiche testuali e strutturali in:
+  - `components/PointsOfInterest.tsx`
+  - `components/SuiteAmenities.tsx`
+  - `components/SuitesGeneralDescription.tsx`
