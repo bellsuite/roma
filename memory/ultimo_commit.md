@@ -1,7 +1,9 @@
-# Registro Modifiche (Ultimo Commit)
+# Registro Modifiche (Ultimo Stato)
 
-## Dettagli Commit
-- **Messaggio:** Riparato errore runtime in PointsOfInterest.tsx
+## Dettagli Stato
+- **Stato:** Versione consolidata con componenti aggiornati e tradotti.
 
 ## Sintesi Modifiche
-- **`components/PointsOfInterest.tsx`**: Resa la prop `points` opzionale e impostato un valore predefinito di array vuoto per evitare errori di runtime se la prop non viene passata.
+- **Nuovi Componenti:** Creazione di `components/TiramisuVoucher.tsx` e aggiornamento estetico di `components/PointsOfInterest.tsx`.
+- **Internazionalizzazione:** Traduzione completa in lingua italiana di `Navbar`, `Footer`, `TiramisuVoucher` e `PointsOfInterest`.
+- **Configurazione Font:** Aggiornamento variabili `Fraunces` in `app/globals.css`.
