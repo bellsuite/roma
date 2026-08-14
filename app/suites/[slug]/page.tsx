@@ -7,7 +7,8 @@ import TiramisuVoucher from "@/components/TiramisuVoucher";
 import ContactForm from "@/components/ContactForm";
 import PointsOfInterest from "@/components/PointsOfInterest";
 import Footer from "@/components/Footer";
-const suitesData: { [key: string]: { name: string; photos: string[] } } = {
+import SuiteGallery from "@/components/SuiteGallery";
+const suitesData: { [key: string]: { name: string; photos: string[]; video?: string } } = {
   "suite-1": {
     name: "Suite Uno",
     photos: [
@@ -22,6 +23,7 @@ const suitesData: { [key: string]: { name: string; photos: string[] } } = {
       "/foto-suites/suite-1/_MG_8941.avif",
       "/foto-suites/suite-1/_MG_8956.avif",
     ],
+    video: "/foto-suites/suite-1/video-app1.mp4",
   },
   "suite-2": {
     name: "Suite Due",
@@ -37,6 +39,7 @@ const suitesData: { [key: string]: { name: string; photos: string[] } } = {
       "/foto-suites/suite-2/_MG_8955.avif",
       "/foto-suites/suite-2/_MG_8959.avif",
     ],
+    video: "/foto-suites/suite-2/video-app2.mp4",
   },
 };
 
@@ -46,6 +49,12 @@ export default async function SuitePage({ params }: { params: Promise<{ slug: st
 
   if (!suite) {
     return <div>Suite non trovata</div>;
+  }
+
+  // Combine photos and video into a single media array for the gallery, placing video as the 4th item (index 3)
+  const media = [...suite.photos];
+  if (suite.video) {
+    media.splice(3, 0, suite.video);
   }
 
   return (
@@ -61,32 +70,8 @@ export default async function SuitePage({ params }: { params: Promise<{ slug: st
         </div>
 
 
-        <div className="grid md:grid-cols-2 md:grid-rows-2 gap-4 max-w-container-large mx-auto">
-          {/* Main Large Photo */}
-          <div className="relative aspect-[3/4] md:aspect-auto md:row-span-2 rounded-md overflow-hidden">
-            <Image 
-              src={suite.photos[0]} 
-              alt={suite.name} 
-              fill 
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover" 
-            />
-          </div>
-          
-          {/* Smaller Photos */}
-          {suite.photos.slice(1, 3).map((photo, index) => (
-            <div key={index} className="relative aspect-video rounded-md overflow-hidden">
-              <Image 
-                src={photo} 
-                alt={`${suite.name} ${index + 2}`} 
-                fill 
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover" 
-              />
-            </div>
-          ))}
-        </div>
+        <SuiteGallery media={media} name={suite.name} />
+
       </section>
 
       <SuitesGeneralDescription />
