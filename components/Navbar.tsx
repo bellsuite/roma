@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className="relative z-50 bg-blu text-bianco px-padding-global">
       <div className="flex items-center py-4">
         <a href="/" className="relative w-[120px] md:w-[144px] h-auto block cursor-pointer">
-          <img src="/logo.svg" alt="Bell Suites Logo" className="w-[120px] md:w-[144px] h-auto object-contain" />
+          <img src="/logo.svg" alt="Logo Bell Suites" className="w-[120px] md:w-[144px] h-auto object-contain" />
         </a>
 
         {/* Desktop Menu */}
@@ -20,7 +20,7 @@ export default function Navbar() {
 
           <div className="relative group cursor-pointer p-2">
             <span className="group-hover:bg-white/20 p-2 rounded-md flex items-center gap-2 transition-colors duration-150">
-              The suites
+              Le suite
               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -31,7 +31,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a href="#" className="hover:bg-white/20 p-2 rounded transition-colors duration-150">San Giovanni</a>
+          {/* <a href="#" className="hover:bg-white/20 p-2 rounded transition-colors duration-150">San Giovanni</a> */}
         </div>
 
         <div className="ml-auto flex items-center gap-4">
@@ -65,7 +65,7 @@ export default function Navbar() {
             <a href="/" className="p-2 border-b border-white/10">Home</a>
             <a href="/suites/suite-1" className="p-2 border-b border-white/10">Suite 1</a>
             <a href="/suites/suite-2" className="p-2 border-b border-white/10">Suite 2</a>
-            <a href="#" className="p-2 border-b border-white/10">San Giovanni</a>
+            {/* <a href="#" className="p-2 border-b border-white/10">San Giovanni</a> */}
             <div className="flex gap-4 p-2">
               <span>🇬🇧</span>
               <span>🇮🇹</span>

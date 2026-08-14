@@ -3,18 +3,24 @@ import Navbar from "@/components/Navbar";
 import Separator from "@/components/Separator";
 import SuitesGeneralDescription from "@/components/SuitesGeneralDescription";
 import SuiteAmenities from "@/components/SuiteAmenities";
+import TiramisuVoucher from "@/components/TiramisuVoucher";
 import ContactForm from "@/components/ContactForm";
-import Voucher from "@/components/Voucher";
 import PointsOfInterest from "@/components/PointsOfInterest";
 import Footer from "@/components/Footer";
 const suitesData: { [key: string]: { name: string; photos: string[] } } = {
   "suite-1": {
     name: "Suite 1",
     photos: [
-      "/foto-suites/suite-1/_MG_8931.avif",
+      "/foto-suites/suite-1/_MG_8939.avif",
       "/foto-suites/suite-1/_MG_8932.avif",
       "/foto-suites/suite-1/_MG_8933.avif",
       "/foto-suites/suite-1/_MG_8934.avif",
+      "/foto-suites/suite-1/_MG_8936.avif",
+      "/foto-suites/suite-1/_MG_8938.avif",
+      "/foto-suites/suite-1/_MG_8931.avif",
+      "/foto-suites/suite-1/_MG_8940.avif",
+      "/foto-suites/suite-1/_MG_8941.avif",
+      "/foto-suites/suite-1/_MG_8956.avif",
     ],
   },
   "suite-2": {
@@ -24,6 +30,12 @@ const suitesData: { [key: string]: { name: string; photos: string[] } } = {
       "/foto-suites/suite-2/_MG_8946.avif",
       "/foto-suites/suite-2/_MG_8947.avif",
       "/foto-suites/suite-2/_MG_8948.avif",
+      "/foto-suites/suite-2/_MG_8951.avif",
+      "/foto-suites/suite-2/_MG_8952.avif",
+      "/foto-suites/suite-2/_MG_8953.avif",
+      "/foto-suites/suite-2/_MG_8954.avif",
+      "/foto-suites/suite-2/_MG_8955.avif",
+      "/foto-suites/suite-2/_MG_8959.avif",
     ],
   },
 };
@@ -80,7 +92,7 @@ export default async function SuitePage({ params }: { params: Promise<{ slug: st
       <SuitesGeneralDescription />
       <SuiteAmenities />
       <Separator />
-      <Voucher />
+      <TiramisuVoucher />
       <PointsOfInterest />
       <ContactForm />      
       <Footer />
