@@ -1,9 +1,14 @@
 # Registro Modifiche (Ultimo Stato)
 
 ## Dettagli Stato
-- **Stato:** Versione consolidata con componenti aggiornati e tradotti.
+- **Commit ID:** 524aea4 (aggiornato con traduzioni)
+- **Data:** 14 Agosto 2026
 
 ## Sintesi Modifiche
-- **Nuovi Componenti:** Creazione di `components/TiramisuVoucher.tsx` e aggiornamento estetico di `components/PointsOfInterest.tsx`.
-- **Internazionalizzazione:** Traduzione completa in lingua italiana di `Navbar`, `Footer`, `TiramisuVoucher` e `PointsOfInterest`.
-- **Configurazione Font:** Aggiornamento variabili `Fraunces` in `app/globals.css`.
+- **Traduzione Interfaccia:** Completata la traduzione in lingua italiana di:
+  - `app/page.tsx` (Homepage)
+  - `app/suites/[slug]/page.tsx` (Pagina dettaglio suite)
+- **Aggiornamenti Componenti:** Modifiche testuali e strutturali in:
+  - `components/PointsOfInterest.tsx`
+  - `components/SuiteAmenities.tsx`
+  - `components/SuitesGeneralDescription.tsx`

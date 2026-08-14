@@ -20,14 +20,14 @@ export default function Navbar() {
 
           <div className="relative group cursor-pointer p-2">
             <span className="group-hover:bg-white/20 p-2 rounded-md flex items-center gap-2 transition-colors duration-150">
-              Le suite
+              Le Suite
               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
             <div className="absolute left-0 mt-2 w-48 bg-blu text-bianco hidden group-hover:block p-2 z-[60] shadow-lg rounded-md">
-              <a href="/suites/suite-1" className="block hover:bg-white/20 p-2 rounded-md mb-1 transition-colors duration-150">Suite 1</a>
-              <a href="/suites/suite-2" className="hover:bg-white/20 p-2 rounded-md block transition-colors duration-150">Suite 2</a>
+              <a href="/suites/suite-1" className="block hover:bg-white/20 p-2 rounded-md mb-1 transition-colors duration-150">Suite Uno</a>
+              <a href="/suites/suite-2" className="hover:bg-white/20 p-2 rounded-md block transition-colors duration-150">Suite Due</a>
             </div>
           </div>
 
@@ -63,8 +63,8 @@ export default function Navbar() {
         {isOpen && (
           <div className="absolute top-full left-0 w-full bg-blu p-padding-global lg:hidden flex flex-col gap-4 z-[50]">
             <a href="/" className="p-2 border-b border-white/10">Home</a>
-            <a href="/suites/suite-1" className="p-2 border-b border-white/10">Suite 1</a>
-            <a href="/suites/suite-2" className="p-2 border-b border-white/10">Suite 2</a>
+            <a href="/suites/suite-1" className="p-2 border-b border-white/10">Suite Uno</a>
+            <a href="/suites/suite-2" className="p-2 border-b border-white/10">Suite Due</a>
             {/* <a href="#" className="p-2 border-b border-white/10">San Giovanni</a> */}
             <div className="flex gap-4 p-2">
               <span>🇬🇧</span>
