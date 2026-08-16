@@ -8,6 +8,7 @@ const columns = [
     { text: "Bollitore elettrico", icon: "kettle" },
     { text: "Zona pranzo", icon: "restaurant" },
     { text: "Soggiorno", icon: "chair" },
+    
   ],
   [
     { text: "Smart TV nel soggiorno", icon: "tv_displays" },
@@ -15,6 +16,7 @@ const columns = [
     { text: "Doccia di lusso con cromoterapia effetto pioggia", icon: "shower" },
     { text: "Asciugacapelli", icon: "airware" },
     { text: "Set di cortesia", icon: "self_care" },
+    { text: "Finestre insonorizzate", icon: "window_closed" },    
   ],
   [
     { text: "Biancheria di qualità premium", icon: "workspace_premium" },

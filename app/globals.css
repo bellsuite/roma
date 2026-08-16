@@ -34,6 +34,16 @@
   --radius-large: 8px;
   --radius-medium: 8px;
   --radius-small: 8px;
+
+  --animate-flash-fade: flash-fade 3s ease-out forwards;
+}
+
+@keyframes flash-fade {
+  0%, 100% { opacity: 0; }
+  10%, 30%, 50%, 70%, 90% { opacity: 1; }
+  20%, 40%, 60%, 80% { opacity: 0; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @layer utilities {
@@ -52,6 +62,9 @@
   }
   .max-w-container-medium {
     max-width: 900px;
+  }
+  .animate-flash-fade {
+    animation: flash-fade 3s ease-out forwards;
   }
 }
 
