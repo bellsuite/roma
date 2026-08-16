@@ -1,14 +1,8 @@
-# Registro Modifiche (Ultimo Stato)
+# Ultimo Commit - 16 Agosto 2026
 
-## Dettagli Stato
-- **Commit ID:** 524aea4 (aggiornato con traduzioni)
-- **Data:** 14 Agosto 2026
-
-## Sintesi Modifiche
-- **Traduzione Interfaccia:** Completata la traduzione in lingua italiana di:
-  - `app/page.tsx` (Homepage)
-  - `app/suites/[slug]/page.tsx` (Pagina dettaglio suite)
-- **Aggiornamenti Componenti:** Modifiche testuali e strutturali in:
-  - `components/PointsOfInterest.tsx`
-  - `components/SuiteAmenities.tsx`
-  - `components/SuitesGeneralDescription.tsx`
+## Modifiche
+- Aggiornato `components/SuiteGallery.tsx` per migliorare l'esperienza mobile:
+  - Visualizzazione di una sola immagine (la prima) con aspect ratio 16:9 su mobile.
+  - Rimozione delle immagini secondarie su mobile.
+  - Aggiunta di un'icona lente di ingrandimento visibile (con overlay) per indicare che l'immagine è cliccabile per aprire la lightbox.
+  - Layout desktop mantenuto invariato.

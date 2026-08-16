@@ -42,7 +42,7 @@ export default function SuiteGallery({ media, name }: SuiteGalleryProps) {
       <div className="grid md:grid-cols-2 md:grid-rows-2 gap-4 max-w-container-large mx-auto">
         {/* Main Large Media */}
         <div 
-          className={`relative aspect-[3/4] md:aspect-auto md:row-span-2 rounded-md overflow-hidden group ${loadedStates[0] ? 'cursor-pointer' : ''}`} 
+          className={`relative aspect-video md:aspect-auto md:row-span-2 rounded-md overflow-hidden group ${loadedStates[0] ? 'cursor-pointer' : ''}`} 
           onClick={() => loadedStates[0] && setLightboxIndex(0)}
         >
           <div className={`absolute inset-0 flex items-center justify-center bg-grigio-chiarissimo transition-opacity duration-500 ${loadedStates[0] ? 'opacity-0' : 'opacity-100'}`}>
@@ -69,7 +69,7 @@ export default function SuiteGallery({ media, name }: SuiteGalleryProps) {
             />
           )}
 
-          <div className={`absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white ${loadedStates[0] ? '' : 'hidden'}`}>
+          <div className={`absolute inset-0 bg-black/30 opacity-60 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-center justify-center text-white ${loadedStates[0] ? '' : 'hidden'}`}>
              <MagnifierIcon />
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function SuiteGallery({ media, name }: SuiteGalleryProps) {
           return (
             <div 
               key={actualIndex} 
-              className={`relative aspect-video rounded-md overflow-hidden group ${loadedStates[actualIndex] ? 'cursor-pointer' : ''}`} 
+              className={`hidden md:block relative aspect-video rounded-md overflow-hidden group ${loadedStates[actualIndex] ? 'cursor-pointer' : ''}`} 
               onClick={() => loadedStates[actualIndex] && setLightboxIndex(actualIndex)}
             >
               <div className={`absolute inset-0 flex items-center justify-center bg-grigio-chiarissimo transition-opacity duration-500 ${loadedStates[actualIndex] ? 'opacity-0' : 'opacity-100'}`}>
