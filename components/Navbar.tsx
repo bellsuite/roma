@@ -61,12 +61,12 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="absolute top-full left-0 w-full bg-blu p-padding-global lg:hidden flex flex-col gap-4 z-[50]">
-            <a href="/" className="p-2 border-b border-white/10">Home</a>
-            <a href="/suites/suite-1" className="p-2 border-b border-white/10">Suite Uno</a>
-            <a href="/suites/suite-2" className="p-2 border-b border-white/10">Suite Due</a>
-            {/* <a href="#" className="p-2 border-b border-white/10">San Giovanni</a> */}
-            <div className="flex gap-4 p-2">
+          <div className="absolute top-full left-0 w-full bg-blu p-padding-global lg:hidden flex flex-col gap-6 z-[50]">
+            <a href="/" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Home</a>
+            <a href="/suites/suite-1" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Uno</a>
+            <a href="/suites/suite-2" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Due</a>
+            {/* <a href="#" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">San Giovanni</a> */}
+            <div className="flex gap-6 p-4 text-4xl">
               <span>🇬🇧</span>
               <span>🇮🇹</span>
               <span>🇩🇪</span>

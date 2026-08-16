@@ -42,7 +42,7 @@ export default function SuiteGallery({ media, name }: SuiteGalleryProps) {
       <div className="grid md:grid-cols-2 md:grid-rows-2 gap-4 max-w-container-large mx-auto">
         {/* Main Large Media */}
         <div 
-          className={`relative aspect-video md:aspect-auto md:row-span-2 rounded-md overflow-hidden group ${loadedStates[0] ? 'cursor-pointer' : ''}`} 
+          className={`relative aspect-square md:aspect-auto md:row-span-2 rounded-md overflow-hidden group ${loadedStates[0] ? 'cursor-pointer' : ''}`} 
           onClick={() => loadedStates[0] && setLightboxIndex(0)}
         >
           <div className={`absolute inset-0 flex items-center justify-center bg-grigio-chiarissimo transition-opacity duration-500 ${loadedStates[0] ? 'opacity-0' : 'opacity-100'}`}>
