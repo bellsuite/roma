@@ -30,7 +30,7 @@ export default function PointsOfInterest() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-x-16 md:gap-y-20">
           {points.map((point, index) => (
             <div key={index} className="flex items-start pl-6 border-l border-white">
-              <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-xs py-4">
+              <div className="flex flex-col items-left md:items-start max-w-xs py-4">
                 <span className="text-6xl md:text-8xl font-heading text-white mb-4">
                   {point.number}
                 </span>

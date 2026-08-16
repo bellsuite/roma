@@ -20,7 +20,8 @@ export default function Home() {
           { text: "Docce a pioggia e bagni in marmo", icon: "shower" },
           { text: "Una cucina completamente attrezzata con macchina per espresso", icon: "kitchen" },
           { text: "Connessione Wi-Fi in fibra ottica ultra veloce (2,5 Gbps)", icon: "wifi" },
-          { text: "Aria condizionata", icon: "climate" }
+          { text: "Aria condizionata", icon: "climate" },
+          { text: "Finestre insonorizzate", icon: "window_closed" }
         ]}
         imageSrc="/foto-suites/suite-1/_MG_8939.avif"
         imageAlt="Suite Uno"
@@ -35,7 +36,8 @@ export default function Home() {
           { text: "Docce a pioggia e bagni in marmo", icon: "shower" },
           { text: "Una cucina completamente attrezzata con macchina per espresso", icon: "kitchen" },
           { text: "Connessione Wi-Fi in fibra ottica ultra veloce (2,5 Gbps)", icon: "wifi" },
-          { text: "Aria condizionata", icon: "climate" }
+          { text: "Aria condizionata", icon: "climate" },
+          { text: "Finestre insonorizzate", icon: "window_closed" }
         ]}
         imageSrc="/foto-suites/suite-2/_MG_8945.avif"
         imageAlt="Suite Due"

@@ -8,7 +8,7 @@ export default function TiramisuVoucher() {
         {/* Text side */}
         <div className="space-y-8">
           <h2 className="text-4xl lg:text-5xl font-heading text-blu leading-tight">
-            Il tuo soggiorno include un voucher per il miglior tiramisù di Roma, offerto da noi
+            Il tuo soggiorno include un voucher per la colazione presso Pompi, il miglior tiramisù di Roma
           </h2>
           <p className="text-lg text-grigio-scurissimo  leading-relaxed">
             Si trova a due minuti a piedi dalla tua porta. Il caffè è forte e i pasticcini sono preparati prima dell'alba.
