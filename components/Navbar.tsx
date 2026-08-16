@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="relative z-50 bg-blu text-bianco px-padding-global">
-      <div className="flex items-center py-4">
+      <div className="max-w-container-large mx-auto flex items-center py-4">
         <a href="/" className="relative w-[120px] md:w-[144px] h-auto block cursor-pointer">
           <img src="/logo.svg" alt="Logo Bell Suites" className="w-[120px] md:w-[144px] h-auto object-contain" />
         </a>
