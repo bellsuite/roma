@@ -28,7 +28,7 @@
 | `Color/grigio scuro` | `#2F3032` |
 | `Color/nero` | `#000000` |
 | `Color/oro` | `#AB8D47` |
-| `Color/oro chiaro` | `#D0BD8F` |
+| `Color/oro chiaro` | `#f6e4b6` |
 | `Color/oro scuro` | `#68562C` |
 
 ### Opacity
