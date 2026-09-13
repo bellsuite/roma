@@ -23,7 +23,7 @@ export default function Home() {
           { text: "Aria condizionata", icon: "climate" },
           { text: "Finestre insonorizzate", icon: "window_closed" }
         ]}
-        imageSrc="/foto-suites/suite-1/_MG_8939.avif"
+        imageSrc="/foto-suites/suite-1/camera_1.avif"
         imageAlt="Suite Uno"
         suitePath="/suites/suite-1"
       />
@@ -39,7 +39,7 @@ export default function Home() {
           { text: "Aria condizionata", icon: "climate" },
           { text: "Finestre insonorizzate", icon: "window_closed" }
         ]}
-        imageSrc="/foto-suites/suite-2/_MG_8945.avif"
+        imageSrc="/foto-suites/suite-2/camera_1.avif"
         imageAlt="Suite Due"
         suitePath="/suites/suite-2"
       />

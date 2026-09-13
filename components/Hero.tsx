@@ -3,7 +3,7 @@ export default function Hero() {
     <section 
       className="relative h-[calc(100vh-200px)] md:h-screen flex flex-col items-center justify-center text-center p-padding-global text-bianco"
       style={{
-        backgroundImage: "url('/foto-suites/suite-1/_MG_8939.avif')",
+        backgroundImage: "url('/foto-suites/suite-1/camera_1.avif')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -34,4 +34,5 @@ export default function Hero() {
     </section>
   );
 }
+
 
