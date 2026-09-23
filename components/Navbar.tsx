@@ -26,8 +26,8 @@ export default function Navbar() {
               </svg>
             </span>
             <div className="absolute left-0 mt-2 w-48 bg-blu text-bianco hidden group-hover:block p-2 z-[60] shadow-lg rounded-md">
-              <a href="/suites/suite-1" className="block hover:bg-white/20 p-2 rounded-md mb-1 transition-colors duration-150">Suite Uno</a>
-              <a href="/suites/suite-2" className="hover:bg-white/20 p-2 rounded-md block transition-colors duration-150">Suite Due</a>
+              <a href="/suites/suite-1" className="block hover:bg-white/20 p-2 rounded-md mb-1 transition-colors duration-150">Suite Palatino</a>
+              <a href="/suites/suite-2" className="hover:bg-white/20 p-2 rounded-md block transition-colors duration-150">Suite Aventino</a>
             </div>
           </div>
 
@@ -63,8 +63,8 @@ export default function Navbar() {
         {isOpen && (
           <div className="absolute top-full left-0 w-full bg-blu p-padding-global lg:hidden flex flex-col gap-6 z-[50]">
             <a href="/" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Home</a>
-            <a href="/suites/suite-1" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Uno</a>
-            <a href="/suites/suite-2" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Due</a>
+            <a href="/suites/suite-1" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Palatino</a>
+            <a href="/suites/suite-2" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Aventino</a>
             {/* <a href="#" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">San Giovanni</a> */}
             <div className="flex gap-6 p-4 text-4xl">
               <span>🇬🇧</span>

@@ -15,8 +15,8 @@ export default function Footer() {
           <div className="col-span-1">
             <h3 className="font-body font-semibold text-lg mb-6">Le Suite</h3>
             <ul className="space-y-4 text-bianco/80">
-              <li><a href="/suites/suite-1" className="hover:text-bianco">Suite Uno</a></li>
-              <li><a href="/suites/suite-2" className="hover:text-bianco">Suite Due</a></li>
+              <li><a href="/suites/suite-1" className="hover:text-bianco">Suite Palatino</a></li>
+              <li><a href="/suites/suite-2" className="hover:text-bianco">Suite Aventino</a></li>
               <li><a href="#contact-form" className="hover:text-bianco">Prenota ora</a></li>
             </ul>
           </div>
