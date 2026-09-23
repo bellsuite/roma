@@ -13,8 +13,8 @@ export default function Home() {
       <Hero />
       <TextWithImageRight 
         priority
-        title="Suite Uno, un rifugio tranquillo"
-        price="160 EUR a notte"
+        title="Suite Palatino, un rifugio tranquillo"
+        price="168 EUR a notte"
         description="La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite)."
         features={[
           { text: "Docce a pioggia e bagni in marmo", icon: "shower" },
@@ -24,13 +24,13 @@ export default function Home() {
           { text: "Finestre insonorizzate", icon: "window_closed" }
         ]}
         imageSrc="/foto-suites/suite-1/camera_1.avif"
-        imageAlt="Suite Uno"
+        imageAlt="Suite Palatino"
         suitePath="/suites/suite-1"
       />
       <Separator />
       <TextWithImageLeft 
-        title="Suite Due, un santuario moderno"
-        price="175 EUR a notte"
+        title="Suite Aventino, un santuario moderno"
+        price="168 EUR a notte"
         description="La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite)."
         features={[
           { text: "Docce a pioggia e bagni in marmo", icon: "shower" },
@@ -40,7 +40,7 @@ export default function Home() {
           { text: "Finestre insonorizzate", icon: "window_closed" }
         ]}
         imageSrc="/foto-suites/suite-2/camera_1.avif"
-        imageAlt="Suite Due"
+        imageAlt="Suite Aventino"
         suitePath="/suites/suite-2"
       />
       <Separator />

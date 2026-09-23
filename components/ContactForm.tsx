@@ -108,8 +108,8 @@ export default function ContactForm() {
                 required
               >
                 <option value="">Seleziona...</option>
-                <option value="suite1">Suite Uno</option>
-                <option value="suite2">Suite Due</option>
+                <option value="suite1">Suite Palatino</option>
+                <option value="suite2">Suite Aventino</option>
                 <option value="both">Entrambe</option>
               </select>
             </div>
