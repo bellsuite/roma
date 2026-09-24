@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TextWithImageRight from "@/components/TextWithImageRight";
 import TextWithImageLeft from "@/components/TextWithImageLeft";
 import Separator from "@/components/Separator";
+import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -43,6 +44,8 @@ export default function Home() {
         imageAlt="Suite Aventino"
         suitePath="/suites/suite-2"
       />
+      <Separator />
+      <Testimonials />
       <Separator />
       <ContactForm />
       <Footer />
