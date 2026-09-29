@@ -27,11 +27,11 @@ export default function Navbar() {
             </span>
             <div className="absolute left-0 mt-2 w-48 bg-blu text-bianco hidden group-hover:block p-2 z-[60] shadow-lg rounded-md">
               <a href="/suites/suite-1" className="block hover:bg-white/20 p-2 rounded-md mb-1 transition-colors duration-150">Suite Palatino</a>
-              <a href="/suites/suite-2" className="hover:bg-white/20 p-2 rounded-md block transition-colors duration-150">Suite Aventino</a>
+              <a href="/suites/suite-2" className="block hover:bg-white/20 p-2 rounded-md block transition-colors duration-150">Suite Aventino</a>
             </div>
           </div>
 
-          {/* <a href="#" className="hover:bg-white/20 p-2 rounded transition-colors duration-150">San Giovanni</a> */}
+          <a href="/mappa" className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150">Mappa</a>
         </div>
 
         <div className="ml-auto flex items-center gap-4">
@@ -65,7 +65,7 @@ export default function Navbar() {
             <a href="/" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Home</a>
             <a href="/suites/suite-1" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Palatino</a>
             <a href="/suites/suite-2" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Aventino</a>
-            {/* <a href="#" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">San Giovanni</a> */}
+            <a href="/mappa" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Mappa</a>
             <div className="flex gap-6 p-4 text-4xl">
               <span>🇬🇧</span>
               <span>🇮🇹</span>

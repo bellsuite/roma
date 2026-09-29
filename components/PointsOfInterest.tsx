@@ -2,11 +2,11 @@ import React from 'react';
 
 const points = [
   { number: '2', description: 'Minuti a piedi dalla pasticceria Pompi' },
-  { number: '6', description: 'Fermate in totale di metropolitana per raggiungere il Colosseo' },
+  { number: '2', description: 'Fermate in totale di metropolitana per raggiungere il Colosseo' },
   { number: '4', description: 'Minuti a piedi dalla fermata della metropolitana Re di Roma' },
   { number: '7', description: 'Fermate di metropolitana per raggiungere Piazza di Spagna' },
   { number: '10', description: 'Minuti a piedi dalla Basilica di San Giovanni in Laterano' },
-  { number: '4', description: 'Fermate di metropolitana per raggiungere la Basilica di Santa Maria Maggiore' },
+  { number: '3', description: 'Fermate di metropolitana per raggiungere la Basilica di Santa Maria Maggiore (dove è sepolto Papa Francesco)' },
 ];
 
 export default function PointsOfInterest() {

@@ -7,13 +7,14 @@ const columns = [
     { text: "Macchina per caffè espresso", icon: "coffee" },
     { text: "Bollitore elettrico", icon: "kettle" },
     { text: "Zona pranzo", icon: "restaurant" },
-    { text: "Soggiorno", icon: "chair" },
+    { text: "Soggiorno con divano letto matrimoniale", icon: "chair" },
+    { text: "Aria condizionata e riscaldamento", icon: "climate" },
     
   ],
   [
     { text: "Smart TV nel soggiorno", icon: "tv_displays" },
     { text: "Smart TV nella camera da letto", icon: "tv_displays" },
-    { text: "Doccia di lusso con cromoterapia effetto pioggia", icon: "shower" },
+    { text: "Doccia di lusso con cromoterapia LED e effetto pioggia", icon: "shower" },
     { text: "Asciugacapelli", icon: "airware" },
     { text: "Set di cortesia", icon: "self_care" },
     { text: "Finestre insonorizzate", icon: "window_closed" },    
@@ -24,6 +25,7 @@ const columns = [
     { text: "Culla disponibile su richiesta", icon: "crib" },
     { text: "Un voucher colazione presso Pompi incluso per ogni ospite", icon: "bakery_dining" },
     { text: "Struttura interamente non fumatori", icon: "smoke_free" },
+    { text: "Lavatrice e asciugatrice", icon: "laundry" },
   ],
 ];
 
