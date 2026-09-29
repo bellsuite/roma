@@ -17,7 +17,7 @@ export default function Hero() {
           Bell Suites Roma
         </h1>
         <p className="font-heading text-xl md:text-2xl mb-6 max-w-2xl mx-auto text-bianco">
-          A soli 4 minuti a piedi dalla Metro A (Re di Roma)
+          A soli 4 minuti a piedi dalla Metro A (Re di Roma) e 10 minuti a piedi dalla Metro C (San Giovanni - direzione Colosseo)
         </p>
         <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto text-bianco/90 leading-relaxed">
           Due eleganti suite di design da 45 mq, completamente ristrutturate. La posizione strategica perfetta per vivere Roma, collegata direttamente a <strong>San Giovanni, il Colosseo e Piazza di Spagna</strong>.

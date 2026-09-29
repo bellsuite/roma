@@ -18,11 +18,13 @@ export default function Home() {
         price="168 EUR a notte"
         description="La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite)."
         features={[
-          { text: "Docce a pioggia e bagni in marmo", icon: "shower" },
+          { text: "Doccia con cromoterapia LED", icon: "shower" },
           { text: "Una cucina completamente attrezzata con macchina per espresso", icon: "kitchen" },
           { text: "Connessione Wi-Fi in fibra ottica ultra veloce (2,5 Gbps)", icon: "wifi" },
-          { text: "Aria condizionata", icon: "climate" },
-          { text: "Finestre insonorizzate", icon: "window_closed" }
+          { text: "Aria condizionata e riscaldamento", icon: "climate" },
+          { text: "Finestre insonorizzate", icon: "window_closed" },
+          { text: "Lavatrice e asciugatrice", icon: "laundry" },
+          { text: "Divano letto matrimoniale", icon: "chair" }
         ]}
         imageSrc="/foto-suites/suite-1/camera_1.avif"
         imageAlt="Suite Palatino"
@@ -34,11 +36,13 @@ export default function Home() {
         price="168 EUR a notte"
         description="La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite)."
         features={[
-          { text: "Docce a pioggia e bagni in marmo", icon: "shower" },
+          { text: "Doccia con cromoterapia LED", icon: "shower" },
           { text: "Una cucina completamente attrezzata con macchina per espresso", icon: "kitchen" },
           { text: "Connessione Wi-Fi in fibra ottica ultra veloce (2,5 Gbps)", icon: "wifi" },
-          { text: "Aria condizionata", icon: "climate" },
-          { text: "Finestre insonorizzate", icon: "window_closed" }
+          { text: "Aria condizionata e riscaldamento", icon: "climate" },
+          { text: "Finestre insonorizzate", icon: "window_closed" },
+          { text: "Lavatrice e asciugatrice", icon: "laundry" },
+          { text: "Divano letto matrimoniale", icon: "chair" }
         ]}
         imageSrc="/foto-suites/suite-2/camera_1.avif"
         imageAlt="Suite Aventino"
