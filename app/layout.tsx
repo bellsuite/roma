@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Suite di Design a San Giovanni, Roma | Bell Suites",
   description:
     "Due suite di design a San Giovanni, a 4 minuti dalla Metro A. Cucina completa, Wi-Fi in fibra, lavatrice e aria condizionata. Prenota direttamente.",
+  verification: {
+    google: "SVf6iKTee4OjVhO-w7hBSrHHPnJGK0Swkcw7d4bYGUg",
+  },
   icons: {
     icon: [
       { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
