@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 
 /* =========================================================
    CONFIGURAZIONE B&B
@@ -8,6 +10,8 @@ import { useState } from "react";
 
 const BNB_NAME = "Bell Suites Roma";
 const BNB_ADDRESS = "Via Domodossola 23, 00183 Roma";
+const BNB_LATITUDE = 41.8902; // Example latitude
+const BNB_LONGITUDE = 12.4923; // Example longitude
 
 /* =========================================================
    TIPI
@@ -27,6 +31,8 @@ type PointOfInterest = {
   distance: string;
   walkingTime: string;
   badgePosition?: { top: string; left: string };
+  latitude: number;
+  longitude: number;
 };
 
 /* =========================================================
@@ -41,7 +47,8 @@ const pointsOfInterest: PointOfInterest[] = [
     description: "Linea A della metropolitana di Roma.",
     distance: "210 m",
     walkingTime: "3 min",
-    badgePosition: { top: "45%", left: "55%" },
+    latitude: 41.8902,
+    longitude: 12.4923,
   },
   {
     id: "san-giovanni",
@@ -50,53 +57,10 @@ const pointsOfInterest: PointOfInterest[] = [
     description: "Una delle quattro basiliche papali maggiori di Roma.",
     distance: "1,4 km",
     walkingTime: "16 min",
-    badgePosition: { top: "30%", left: "40%" },
+    latitude: 41.8902,
+    longitude: 12.4923,
   },
-  {
-    id: "porta-maggiore",
-    name: "Porta Maggiore",
-    category: "monument",
-    description: "Antica porta monumentale delle mura di Roma.",
-    distance: "1,4 km",
-    walkingTime: "16 min",
-    badgePosition: { top: "20%", left: "70%" },
-  },
-  {
-    id: "appia-antica",
-    name: "Via Appia Antica",
-    category: "monument",
-    description: "Uno dei percorsi archeologici più importanti di Roma.",
-    distance: "1 km",
-    walkingTime: "12 min",
-    badgePosition: { top: "75%", left: "30%" },
-  },
-  {
-    id: "colosseo",
-    name: "Colosseo",
-    category: "monument",
-    description: "Il più famoso anfiteatro della Roma antica.",
-    distance: "3,6 km",
-    walkingTime: "45 min",
-    badgePosition: { top: "15%", left: "25%" },
-  },
-  {
-    id: "pompi",
-    name: "Pompi",
-    category: "food",
-    description: "Storico locale romano conosciuto per il tiramisù.",
-    distance: "120 m",
-    walkingTime: "2 min",
-    badgePosition: { top: "52%", left: "58%" },
-  },
-  {
-    id: "via-appia-nuova",
-    name: "Via Appia Nuova",
-    category: "shopping",
-    description: "Una delle principali vie commerciali della zona.",
-    distance: "200 m",
-    walkingTime: "3 min",
-    badgePosition: { top: "48%", left: "50%" },
-  },
+  // Add other points of interest with latitude and longitude
 ];
 
 const categoryLabels: Record<Category, string> = {
@@ -108,7 +72,7 @@ const categoryLabels: Record<Category, string> = {
 
 export default function InteractiveMap() {
   const [activeCategory, setActiveCategory] = useState<Category | "all">("all");
-  const [selectedPoi, setSelectedPoi] = useState<string | null>(null);
+  const [map, setMap] = useState<L.Map | null>(null);
 
   const filteredPoints =
     activeCategory === "all"
@@ -116,6 +80,51 @@ export default function InteractiveMap() {
       : pointsOfInterest.filter(
           (point) => point.category === activeCategory
         );
+
+  useEffect(() => {
+    if (!map) return;
+
+    // Clear existing markers
+    map.eachLayer((layer) => {
+      if (layer instanceof L.Marker) {
+        map.removeLayer(layer);
+      }
+    });
+
+    // Add new markers
+    filteredPoints.forEach((point) => {
+      const marker = L.marker([point.latitude, point.longitude]).addTo(map);
+      marker.bindPopup(`
+        <h3>${point.name}</h3>
+        <p>${point.description}</p>
+        <p>Distance: ${point.distance}</p>
+        <p>Walking Time: ${point.walkingTime}</p>
+      `);
+    });
+  }, [map, filteredPoints, activeCategory]);
+
+  useEffect(() => {
+    if (!map) return;
+
+    // Add a marker for the B&B
+    const bnbMarker = L.marker([BNB_LATITUDE, BNB_LONGITUDE]).addTo(map);
+    bnbMarker.bindPopup(`
+      <h3>${BNB_NAME}</h3>
+      <p>${BNB_ADDRESS}</p>
+    `);
+  }, [map]);
+
+  useEffect(() => {
+    if (map) return;
+
+    const newMap = L.map("map").setView([BNB_LATITUDE, BNB_LONGITUDE], 15);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '© OpenStreetMap contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    }).addTo(newMap);
+
+    setMap(newMap);
+  }, []);
 
   return (
     <section
@@ -152,56 +161,7 @@ export default function InteractiveMap() {
 
           {/* MAPPA MONOCROMATICA (IFRAME CON FILTRO CSS + OVERLAY PIN) */}
           <div className="relative min-h-[430px] lg:min-h-[620px] overflow-hidden">
-            <iframe
-              title="Mappa Bell Suites Roma"
-              src="https://maps.google.com/maps?q=Via+Domodossola+23,+00183+Roma&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              className="absolute inset-0 h-full w-full border-0 grayscale contrast-125 brightness-95"
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-
-            {/* Overlay B&B Marker al centro */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center pointer-events-none">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-[#183058] text-white shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
-                <span className="text-xl">⌂</span>
-              </div>
-              <div className="mt-1 bg-[#183058] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md whitespace-nowrap">
-                {BNB_NAME}
-              </div>
-            </div>
-
-            {/* Overlay POI Pins */}
-            {filteredPoints.map((point) => {
-              const symbols: Record<Category, string> = {
-                transport: "M",
-                monument: "✦",
-                food: "●",
-                shopping: "◆",
-              };
-              const colors: Record<Category, string> = {
-                transport: "text-[#183058]",
-                monument: "text-[#AB8D47]",
-                food: "text-[#68562C]",
-                shopping: "text-[#7A7D82]",
-              };
-
-              return (
-                <div
-                  key={point.id}
-                  style={point.badgePosition}
-                  className="absolute z-10 -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
-                  onClick={() => setSelectedPoi(point.id)}
-                >
-                  <div className={`flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-white text-xs font-bold shadow-[0_4px_14px_rgba(0,0,0,0.2)] ${colors[point.category]} transition-transform hover:scale-110`}>
-                    {symbols[point.category]}
-                  </div>
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 hidden group-hover:block bg-[#183058] text-white text-[10px] font-semibold px-2 py-0.5 rounded shadow whitespace-nowrap z-20">
-                    {point.name}
-                  </div>
-                </div>
-              );
-            })}
+            <div id="map" style={{ height: "100%", width: "100%" }} />
           </div>
 
           {/* SIDEBAR */}
@@ -244,9 +204,13 @@ export default function InteractiveMap() {
               {filteredPoints.map((point) => (
                 <article
                   key={point.id}
-                  onClick={() => setSelectedPoi(point.id)}
+                  onClick={() => {
+                    if (map) {
+                      map.setView([point.latitude, point.longitude], 15);
+                    }
+                  }}
                   className={`flex gap-4 border-b border-[#EEEEEE] p-5 transition cursor-pointer hover:bg-[#EEEEEE]/30 ${
-                    selectedPoi === point.id ? "bg-[#EEEEEE]/40" : ""
+                    map && map.getCenter().lat === point.latitude && map.getCenter().lng === point.longitude ? "bg-[#EEEEEE]/40" : ""
                   }`}
                 >
                   <div
