@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "figma-ai-bridge": {
+      "command": "node",
+      "args": [
+        "/Volumes/ssd-macrod/Documenti/Figma-AI-Bridge-main/plugin/code.js"
+      ]
+    }
+  }
+}

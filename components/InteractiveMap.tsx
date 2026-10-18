@@ -1,130 +1,169 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import L from "leaflet";
+import { useEffect, useRef, useState } from "react";
 import "leaflet/dist/leaflet.css";
 
-/* =========================================================
-   CONFIGURAZIONE B&B
-========================================================= */
+const BNB_POSITION: [number, number] = [41.88005, 12.5142];
 
-const BNB_NAME = "Bell Suites Roma";
-const BNB_ADDRESS = "Via Domodossola 23, 00183 Roma";
-const BNB_LATITUDE = 41.8902; // Example latitude
-const BNB_LONGITUDE = 12.4923; // Example longitude
-
-/* =========================================================
-   TIPI
-========================================================= */
-
-type Category =
-  | "transport"
-  | "monument"
-  | "food"
-  | "shopping";
-
-type PointOfInterest = {
+type Place = {
   id: string;
   name: string;
-  category: Category;
-  description: string;
-  distance: string;
-  walkingTime: string;
-  badgePosition?: { top: string; left: string };
-  latitude: number;
-  longitude: number;
+  address: string;
+  position: [number, number];
+  symbol: string;
+  featured?: boolean;
 };
 
-/* =========================================================
-   PUNTI DI INTERESSE
-========================================================= */
-
-const pointsOfInterest: PointOfInterest[] = [
+const places: Place[] = [
+  {
+    id: "bell-suites",
+    name: "Bell Suites Roma",
+    address: "Via Domodossola 23, 00183 Roma",
+    position: [41.8798489, 12.5143497],
+    symbol: "⌂",
+    featured: true,
+  },
   {
     id: "metro-re-di-roma",
     name: "Metro Re di Roma",
-    category: "transport",
-    description: "Linea A della metropolitana di Roma.",
-    distance: "210 m",
-    walkingTime: "3 min",
-    latitude: 41.8902,
-    longitude: 12.4923,
+    address: "Piazza dei Re di Roma, 00183 Roma",
+    position: [41.881839, 12.513202],
+    symbol: "M",
+  },
+  {
+    id: "pompi",
+    name: "Pasticceria Pompi",
+    address: "Via Albalonga 9, 00183 Roma",
+    position: [41.880426, 12.513658],
+    symbol: "P",
   },
   {
     id: "san-giovanni",
     name: "Basilica di San Giovanni in Laterano",
-    category: "monument",
-    description: "Una delle quattro basiliche papali maggiori di Roma.",
-    distance: "1,4 km",
-    walkingTime: "16 min",
-    latitude: 41.8902,
-    longitude: 12.4923,
+    address: "Piazza di San Giovanni in Laterano, 00184 Roma",
+    position: [41.8860367, 12.5070516],
+    symbol: "✦",
   },
-  // Add other points of interest with latitude and longitude
+  {
+    id: "santa-maria-maggiore",
+    name: "Basilica di Santa Maria Maggiore",
+    address: "Piazza di Santa Maria Maggiore, 00185 Roma",
+    position: [41.897166, 12.498818],
+    symbol: "S",
+  },
+  {
+    id: "colosseo",
+    name: "Colosseo",
+    address: "Piazza del Colosseo, 00184 Roma",
+    position: [41.890422, 12.491139],
+    symbol: "C",
+  },
+  {
+    id: "terme-caracalla",
+    name: "Terme di Caracalla",
+    address: "Viale delle Terme di Caracalla, 00153 Roma",
+    position: [41.8790454, 12.48996],
+    symbol: "T",
+  },
 ];
 
-const categoryLabels: Record<Category, string> = {
-  transport: "Trasporti",
-  monument: "Attrazioni",
-  food: "Food",
-  shopping: "Shopping",
-};
+function createPopup(place: Place) {
+  const content = document.createElement("div");
+  content.className = "p-2 font-sans";
+
+  const title = document.createElement("h3");
+  title.className = "font-serif text-base font-bold text-[#183058] m-0 mb-1";
+  title.textContent = place.name;
+
+  const address = document.createElement("p");
+  address.className = "text-xs text-[#7A7D82] m-0 mb-2";
+  address.textContent = place.address;
+
+  const directions = document.createElement("a");
+  directions.href = `https://www.google.com/maps/dir/?api=1&destination=${place.position[0]},${place.position[1]}`;
+  directions.target = "_blank";
+  directions.rel = "noopener noreferrer";
+  directions.className = "inline-flex items-center gap-1 text-xs font-semibold text-[#183058] hover:underline";
+  directions.innerHTML = 'Apri in Maps <span aria-hidden="true">↗</span>';
+
+  content.append(title, address, directions);
+  return content;
+}
 
 export default function InteractiveMap() {
-  const [activeCategory, setActiveCategory] = useState<Category | "all">("all");
-  const [map, setMap] = useState<L.Map | null>(null);
-
-  const filteredPoints =
-    activeCategory === "all"
-      ? pointsOfInterest
-      : pointsOfInterest.filter(
-          (point) => point.category === activeCategory
-        );
+  const mapElementRef = useRef<HTMLDivElement>(null);
+  const mapInstanceRef = useRef<import("leaflet").Map | null>(null);
+  const [mapError, setMapError] = useState(false);
 
   useEffect(() => {
-    if (!map) return;
+    let cancelled = false;
 
-    // Clear existing markers
-    map.eachLayer((layer) => {
-      if (layer instanceof L.Marker) {
-        map.removeLayer(layer);
-      }
-    });
+    import("leaflet")
+      .then(({ default: L }) => {
+        if (cancelled || !mapElementRef.current) return;
 
-    // Add new markers
-    filteredPoints.forEach((point) => {
-      const marker = L.marker([point.latitude, point.longitude]).addTo(map);
-      marker.bindPopup(`
-        <h3>${point.name}</h3>
-        <p>${point.description}</p>
-        <p>Distance: ${point.distance}</p>
-        <p>Walking Time: ${point.walkingTime}</p>
-      `);
-    });
-  }, [map, filteredPoints, activeCategory]);
+        if (mapInstanceRef.current) {
+          mapInstanceRef.current.remove();
+        }
 
-  useEffect(() => {
-    if (!map) return;
+        const newMap = L.map(mapElementRef.current, {
+          zoomControl: false,
+          scrollWheelZoom: true,
+        }).setView(BNB_POSITION, 17.5);
 
-    // Add a marker for the B&B
-    const bnbMarker = L.marker([BNB_LATITUDE, BNB_LONGITUDE]).addTo(map);
-    bnbMarker.bindPopup(`
-      <h3>${BNB_NAME}</h3>
-      <p>${BNB_ADDRESS}</p>
-    `);
-  }, [map]);
+        mapInstanceRef.current = newMap;
 
-  useEffect(() => {
-    if (map) return;
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 19,
+        }).addTo(newMap);
 
-    const newMap = L.map("map").setView([BNB_LATITUDE, BNB_LONGITUDE], 15);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '© OpenStreetMap contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-    }).addTo(newMap);
+        places.forEach((place) => {
+          const iconSize = place.featured ? 48 : 38;
+          const marker = L.marker(place.position, {
+            title: place.name,
+            alt: place.name,
+            zIndexOffset: place.featured ? 1000 : 100,
+            icon: L.divIcon({
+              className: "bg-transparent",
+              html: `<div class="flex flex-col items-center group cursor-pointer"><div class="flex items-center justify-center rounded-full border-2 border-white shadow-lg transition-transform hover:scale-110 ${
+                place.featured
+                  ? "h-12 w-12 bg-[#183058] text-white text-xl font-bold ring-4 ring-[#AB8D47]/40"
+                  : "h-9 w-9 bg-white text-[#183058] text-xs font-bold"
+              }">${place.symbol}</div><div class="mt-1 px-2.5 py-1 bg-[#183058] text-white text-[11px] font-semibold rounded-md shadow-md whitespace-nowrap">${place.name}</div></div>`,
+              iconSize: [iconSize, iconSize + 28],
+              iconAnchor: [iconSize / 2, iconSize / 2],
+              popupAnchor: [0, -iconSize / 2],
+            }),
+          }).addTo(newMap);
 
-    setMap(newMap);
+          marker.bindPopup(createPopup(place), {
+            closeButton: true,
+            maxWidth: 280,
+            className: "rounded-xl shadow-xl",
+            autoPanPadding: [24, 24],
+          });
+        });
+      })
+      .catch(() => {
+        if (!cancelled) setMapError(true);
+      });
+
+    return () => {
+      cancelled = true;
+      mapInstanceRef.current?.remove();
+      mapInstanceRef.current = null;
+    };
   }, []);
+
+  const handleZoomIn = () => {
+    mapInstanceRef.current?.zoomIn();
+  };
+
+  const handleZoomOut = () => {
+    mapInstanceRef.current?.zoomOut();
+  };
 
   return (
     <section
@@ -134,135 +173,51 @@ export default function InteractiveMap() {
       <div className="mx-auto w-[calc(100%-24px)] max-w-[1200px] sm:w-[calc(100%-40px)]">
 
         {/* HEADER */}
-        <header className="mb-8 flex flex-col gap-6 lg:mb-9 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
-          <div>
-            <span className="mb-3 block text-[11px] font-bold uppercase tracking-[0.16em] text-[#AB8D47]">
-              Scopri Roma
-            </span>
-            <h2
-              id="interactive-map-title"
-              className="m-0 max-w-3xl font-serif text-4xl font-normal leading-[1.05] text-[#183058] sm:text-5xl lg:text-[56px]"
-            >
-              Il B&B nel cuore di Roma
-            </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-[#7A7D82] sm:text-base">
-              Scopri cosa puoi raggiungere facilmente partendo da Via Domodossola.
-            </p>
-          </div>
-
-          <div className="shrink-0 border-l border-[#C0C0C4] pl-5 text-sm leading-6 text-[#7A7D82]">
-            <span className="block">{BNB_ADDRESS.split(",")[0]}</span>
-            <span className="block">00183 Roma</span>
-          </div>
+        <header className="mb-8 text-center max-w-3xl mx-auto">
+          <span className="mb-3 block text-[11px] font-bold uppercase tracking-[0.16em] text-[#AB8D47]">
+            Posizione Strategica
+          </span>
+          <h2
+            id="interactive-map-title"
+            className="m-0 font-serif text-4xl font-normal leading-[1.05] text-[#183058] sm:text-5xl"
+          >
+            Esplora i dintorni
+          </h2>
+          <p className="mt-4 text-sm leading-7 text-[#7A7D82] sm:text-base">
+            Bell Suites Roma si trova in una posizione privilegiata, a due passi dalla metro Re di Roma, dallo storico Tiramisù Pompi e dai principali monumenti della città.
+          </p>
         </header>
 
-        {/* MAP + SIDEBAR */}
-        <div className="grid min-h-[620px] overflow-hidden rounded-[24px] bg-white shadow-[0_20px_60px_rgba(24,48,88,0.08)] lg:grid-cols-[minmax(0,1.6fr)_minmax(340px,0.8fr)]">
+        {/* MAP CONTAINER */}
+        <div className="relative h-[500px] lg:h-[650px] w-full overflow-hidden rounded-[24px] bg-white shadow-[0_20px_60px_rgba(24,48,88,0.08)]">
+          <div ref={mapElementRef} className="h-full w-full" />
 
-          {/* MAPPA MONOCROMATICA (IFRAME CON FILTRO CSS + OVERLAY PIN) */}
-          <div className="relative min-h-[430px] lg:min-h-[620px] overflow-hidden">
-            <div id="map" style={{ height: "100%", width: "100%" }} />
-          </div>
-
-          {/* SIDEBAR */}
-          <aside className="flex min-w-0 flex-col border-t border-[#EEEEEE] bg-white lg:border-l lg:border-t-0">
-
-            {/* FILTRI */}
-            <div className="flex gap-2 overflow-x-auto border-b border-[#EEEEEE] p-5">
-              <button
-                type="button"
-                aria-pressed={activeCategory === "all"}
-                onClick={() => setActiveCategory("all")}
-                className={`shrink-0 rounded-full border px-3.5 py-2 text-xs transition ${
-                  activeCategory === "all"
-                    ? "border-[#183058] bg-[#183058] text-white"
-                    : "border-[#C0C0C4] bg-transparent text-[#7A7D82] hover:border-[#183058] hover:text-[#183058]"
-                }`}
-              >
-                Tutti
-              </button>
-
-              {(Object.keys(categoryLabels) as Category[]).map((category) => (
-                <button
-                  key={category}
-                  type="button"
-                  aria-pressed={activeCategory === category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`shrink-0 rounded-full border px-3.5 py-2 text-xs transition ${
-                    activeCategory === category
-                      ? "border-[#183058] bg-[#183058] text-white"
-                      : "border-[#C0C0C4] bg-transparent text-[#7A7D82] hover:border-[#183058] hover:text-[#183058]"
-                  }`}
-                >
-                  {categoryLabels[category]}
-                </button>
-              ))}
+          {mapError && (
+            <div className="absolute inset-0 flex items-center justify-center bg-white/90 p-6 text-center text-sm text-[#7A7D82]" role="alert">
+              Non è stato possibile caricare la mappa interattiva. Riprova a ricaricare la pagina.
             </div>
+          )}
 
-            {/* LISTA */}
-            <div className="flex-1 overflow-y-auto lg:max-h-[500px]">
-              {filteredPoints.map((point) => (
-                <article
-                  key={point.id}
-                  onClick={() => {
-                    if (map) {
-                      map.setView([point.latitude, point.longitude], 15);
-                    }
-                  }}
-                  className={`flex gap-4 border-b border-[#EEEEEE] p-5 transition cursor-pointer hover:bg-[#EEEEEE]/30 ${
-                    map && map.getCenter().lat === point.latitude && map.getCenter().lng === point.longitude ? "bg-[#EEEEEE]/40" : ""
-                  }`}
-                >
-                  <div
-                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#EEEEEE] text-xs font-bold ${
-                      point.category === "transport"
-                        ? "text-[#183058]"
-                        : point.category === "monument"
-                          ? "text-[#AB8D47]"
-                          : point.category === "food"
-                            ? "text-[#68562C]"
-                            : "text-[#7A7D82]"
-                    }`}
-                    aria-hidden="true"
-                  >
-                    {point.category === "transport" && "M"}
-                    {point.category === "monument" && "✦"}
-                    {point.category === "food" && "●"}
-                    {point.category === "shopping" && "◆"}
-                  </div>
-
-                  <div className="min-w-0">
-                    <span className="mb-1 block text-[10px] font-bold uppercase tracking-[0.1em] text-[#7A7D82]">
-                      {categoryLabels[point.category]}
-                    </span>
-                    <h3 className="m-0 font-serif text-lg font-normal leading-tight text-[#183058]">
-                      {point.name}
-                    </h3>
-                    <p className="mt-1.5 text-xs leading-5 text-[#7A7D82]">
-                      {point.description}
-                    </p>
-                    <div className="mt-2 flex gap-2 text-[11px] text-[#7A7D82]">
-                      <strong className="text-[#183058]">{point.walkingTime}</strong>
-                      <span>{point.distance}</span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=Via+Domodossola+23,+00183+Roma`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="m-5 flex items-center justify-between rounded-xl bg-[#183058] px-5 py-4 text-sm font-semibold text-white no-underline transition hover:-translate-y-px hover:bg-[#183058]/90 focus:outline-none focus:ring-2 focus:ring-[#183058] focus:ring-offset-2"
+          {/* ZOOM CONTROLS */}
+          <div className="absolute bottom-6 right-6 z-[1000] flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(24,48,88,0.2)] border border-[#EEEEEE]">
+            <button
+              type="button"
+              onClick={handleZoomIn}
+              aria-label="Zoom avanti"
+              className="flex h-11 w-11 items-center justify-center text-xl font-bold text-[#183058] transition hover:bg-[#EEEEEE] active:bg-[#C0C0C4]"
             >
-              <span>Come raggiungerci</span>
-              <span aria-hidden="true" className="text-lg">↗</span>
-            </a>
-
-          </aside>
-
+              +
+            </button>
+            <div className="h-[1px] w-full bg-[#EEEEEE]" />
+            <button
+              type="button"
+              onClick={handleZoomOut}
+              aria-label="Zoom indietro"
+              className="flex h-11 w-11 items-center justify-center text-xl font-bold text-[#183058] transition hover:bg-[#EEEEEE] active:bg-[#C0C0C4]"
+            >
+              −
+            </button>
+          </div>
         </div>
 
       </div>
