@@ -24,12 +24,9 @@ const places: Place[] = [
     symbol: "⌂",
     featured: true,
     svgIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" fill="none" viewBox="0 0 23 25">
-  <mask id="a" width="24" height="26" x="-.5" y="-.5" fill="#000" maskUnits="userSpaceOnUse">
-    <path fill="#fff" d="M-.5-.5h24v26h-24z"/>
-    <path d="m11.516 2.51 8.958 8.309.023.021h-.035v11.356H2.5v-11.38h.04l8.954-8.306.011-.01z"/>
-  </mask>
-  <path stroke="#fff" stroke-linejoin="round" stroke-width="5" d="m11.516 2.51 8.958 8.309.023.021h-.035v11.356H2.5v-11.38h.04l8.954-8.306.011-.01z" mask="url(#a)"/>
+  <path stroke="#fff" stroke-linejoin="round" stroke-width="3" d="m11.516 2.51 8.958 8.309.023.021h-.035v11.356H2.5v-11.38h.04l8.954-8.306.011-.01z" mask="url(#a)"/>
 </svg>
+
 `,
   },
   {
@@ -138,16 +135,9 @@ export default function InteractiveMap() {
         const newMap = L.map(mapElementRef.current, {
           zoomControl: false,
           scrollWheelZoom: true,
-        });
+        }).setView(BNB_POSITION, 16.25);
 
         mapInstanceRef.current = newMap;
-
-        const initialBounds = L.latLngBounds([
-          [41.8798489, 12.5143497], // Bell Suites Roma
-          [41.881839, 12.513202],   // Metro Re di Roma
-          [41.880426, 12.513658],   // Pasticceria Pompi
-        ]);
-        newMap.fitBounds(initialBounds, { padding: [60, 60], maxZoom: 17.5 });
 
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution:
@@ -163,7 +153,7 @@ export default function InteractiveMap() {
             zIndexOffset: place.featured ? 1000 : 100,
             icon: L.divIcon({
               className: "bg-transparent",
-              html: `<div class="flex flex-col items-center group cursor-pointer"><div class="flex items-center justify-center rounded-full border-2 border-white shadow-lg transition-transform hover:scale-110 ${
+              html: `<div class="flex flex-col items-center group cursor-pointer"><div class="flex items-center justify-center rounded-full border-3 border-oro shadow-lg transition-transform hover:scale-110 ${
                 place.featured
                   ? "h-12 w-12 bg-[#183058] text-white text-xl font-bold ring-4 ring-[#AB8D47]/40"
                   : "h-9 w-9 bg-white text-[#183058] text-xs font-bold"
@@ -204,38 +194,22 @@ export default function InteractiveMap() {
   return (
     <section
       aria-labelledby="interactive-map-title"
-      className="w-full bg-bianco py-16 sm:py-20 lg:py-24"
+      className="w-full bg-bianco py-8 sm:py-12 lg:py-16"
     >
       <div className="mx-auto w-[calc(100%-24px)] max-w-[1200px] sm:w-[calc(100%-40px)]">
-
-        {/* HEADER */}
-        <header className="mb-8 text-center max-w-3xl mx-auto">
-          <span className="mb-3 block text-[11px] font-bold uppercase tracking-[0.16em] text-[#AB8D47]">
-            Posizione Strategica
-          </span>
-          <h2
-            id="interactive-map-title"
-            className="m-0 font-serif text-4xl font-normal leading-[1.05] text-[#183058] sm:text-5xl"
-          >
-            Esplora i dintorni
-          </h2>
-          <p className="mt-4 text-sm leading-7 text-[#7A7D82] sm:text-base">
-            Bell Suites Roma si trova in una posizione privilegiata, a due passi dalla metro Re di Roma, dallo storico Tiramisù Pompi e dai principali monumenti della città.
-          </p>
-        </header>
 
         {/* MAP CONTAINER */}
         <div className="relative h-[500px] lg:h-[650px] w-full overflow-hidden rounded-[24px] bg-white shadow-[0_20px_60px_rgba(24,48,88,0.08)]">
           <div ref={mapElementRef} className="h-full w-full" />
 
           {mapError && (
-            <div className="absolute inset-0 flex items-center justify-center bg-white/90 p-6 text-center text-sm text-[#7A7D82]" role="alert">
+            <div className="absolute inset-0 flex items-center justify-center bg-white/90 p-6 text-center text-sm text-grigio-scuro" role="alert">
               Non è stato possibile caricare la mappa interattiva. Riprova a ricaricare la pagina.
             </div>
           )}
 
           {/* ZOOM CONTROLS */}
-          <div className="absolute bottom-6 right-6 z-[1000] flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(24,48,88,0.2)] border border-[#EEEEEE]">
+          <div className="absolute top-6 right-4 sm:right-6 z-[1000] flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(24,48,88,0.2)] border border-[#EEEEEE]">
             <button
               type="button"
               onClick={handleZoomIn}
