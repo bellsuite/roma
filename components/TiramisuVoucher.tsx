@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TiramisuVoucher() {
   return (
-    <section className="px-padding-global py-section-padding-medium bg-bianco">
+    <section className="px-padding-global py-section-padding-medium bg-bianco py-8">
       <div className="max-w-container-large mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* Text side */}

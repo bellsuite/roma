@@ -24,8 +24,6 @@ export default function Footer() {
           <div className="col-span-1">
             <h3 className="font-body font-semibold text-lg mb-6">La zona</h3>
             <ul className="space-y-4 text-bianco/80">
-              <li><a href="#" className="hover:text-bianco">San Giovanni</a></li>
-              <li><a href="#" className="hover:text-bianco">Ristoranti</a></li>
               <li><a href="#" className="hover:text-bianco">Mappa</a></li>
             </ul>
           </div>
@@ -44,11 +42,7 @@ export default function Footer() {
           <div className="col-span-1">
             <h3 className="font-body font-semibold text-lg mb-6">Seguici</h3>
             <ul className="space-y-4 text-bianco/80">
-              <li><a href="#" className="hover:text-bianco">Instagram</a></li>
-              <li><a href="#" className="hover:text-bianco">Facebook</a></li>
-              <li><a href="#" className="hover:text-bianco">Pinterest</a></li>
-              <li><a href="#" className="hover:text-bianco">YouTube</a></li>
-              <li><a href="#" className="hover:text-bianco">LinkedIn</a></li>
+              <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61594115744038" className="hover:text-bianco">Facebook</a></li>
             </ul>
           </div>
         </div>
@@ -60,14 +54,6 @@ export default function Footer() {
               <a href="#" className="underline hover:text-bianco">Privacy Policy</a>
               <a href="#" className="underline hover:text-bianco">Termini di servizio</a>
               <a href="#" className="underline hover:text-bianco">Impostazioni Cookies</a>
-            </div>
-            <div className="flex gap-4 text-xl">
-              {/* Simple placeholder social icons */}
-              <a href="#" aria-label="Facebook">FB</a>
-              <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="X">X</a>
-              <a href="#" aria-label="LinkedIn">LI</a>
-              <a href="#" aria-label="YouTube">YT</a>
             </div>
           </div>
           

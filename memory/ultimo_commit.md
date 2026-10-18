@@ -1,4 +1,11 @@
-# Riepilogo Ultimi Interventi - Agosto 2026
+# Riepilogo Ultimi Interventi - Ottobre 2026
+
+## Mappa Interattiva (`components/InteractiveMap.tsx`)
+- Ottimizzazione dello zoom e dell'area iniziale tramite `fitBounds` per includere automaticamente Bell Suites Roma, Metro Re di Roma e la Pasticceria Pompi.
+- Sostituzione del simbolo testuale "C" del Colosseo con un'icona SVG dedicata raffigurante le arcate del monumento.
+
+## Stile Mappa e Design System (`app/globals.css`)
+- Implementazione di filtri CSS avanzati sulle tile della mappa per ottenere una colorazione monocromatica virata verso il blu istituzionale (`--color-blu` / `#183058`), coerente con il design system e l'estetica Figma.
 
 ## Galleria Suite (`components/SuiteGallery.tsx`)
 - Ottimizzazione mobile: visualizzazione della sola prima immagine con aspect ratio 1:1 (quadrato).

@@ -88,3 +88,27 @@ h1, h2, h3, h4, h5, h6 {
 html {
   scroll-behavior: smooth;
 }
+
+/* Leaflet Map Design System Customization - Monochromatic Blu Tint */
+.leaflet-container {
+  background-color: #EAEFF5 !important;
+  font-family: var(--font-body) !important;
+}
+
+.leaflet-tile-pane img {
+  filter: brightness(0.9) sepia(100%) hue-rotate(185deg) saturate(30%) contrast(100%);
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #FFFFFF !important;
+  color: var(--color-blu) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 40px rgba(24, 48, 88, 0.12) !important;
+  padding: 4px !important;
+}
+
+.leaflet-popup-tip {
+  background-color: #FFFFFF !important;
+}
+
+
