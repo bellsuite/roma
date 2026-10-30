@@ -53,7 +53,7 @@ export default function TextWithImageRight({
 
           <div className="flex gap-4">
             <a href={suitePath} className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 hover:cursor-pointer rounded-md">Scopri</a>
-            <a href="#contact-form" className="flex items-center text-blu font-semibold px-4 py-3 rounded-md transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
+            <a target="_blank" href="https://www.airbnb.it/rooms/1779666948472189317" className="flex items-center text-blu font-semibold px-4 py-3 rounded-md transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
           </div>
         </div>
 

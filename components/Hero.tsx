@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section 
+    <section
       className="relative h-[calc(100vh-200px)] md:h-screen flex flex-col items-center justify-center text-center p-padding-global text-bianco"
       style={{
         backgroundImage: "url('/foto-suites/suite-1/camera_1.avif')",
@@ -23,9 +23,6 @@ export default function Hero() {
           Due eleganti suite di design da 45 mq, completamente ristrutturate. La posizione strategica perfetta per vivere Roma, collegata direttamente a <strong>San Giovanni, il Colosseo e Piazza di Spagna</strong>.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#contact-form" className="w-full sm:w-auto inline-block bg-oro-chiaro text-grigio-scurissimo px-8 py-3 font-semibold cursor-pointer transition-colors duration-150 hover:opacity-80 rounded-md">
-            Prenota Ora
-          </a>
           <a href="/suites/suite-1" className="w-full sm:w-auto inline-block bg-transparent border border-bianco text-bianco px-8 py-3 font-semibold cursor-pointer transition-colors duration-150 hover:bg-bianco hover:text-blu rounded-md">
             Scopri le Suite
           </a>

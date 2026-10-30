@@ -11,20 +11,19 @@ export default function Footer() {
           </div>
           {/* Empty Column for Mobile */}
           <div className="col-span-1 block md:hidden"></div>
-          
+
           <div className="col-span-1">
             <h3 className="font-body font-semibold text-lg mb-6">Le Suite</h3>
             <ul className="space-y-4 text-bianco/80">
               <li><a href="/suites/suite-1" className="hover:text-bianco">Suite Palatino</a></li>
               <li><a href="/suites/suite-2" className="hover:text-bianco">Suite Aventino</a></li>
-              <li><a href="#contact-form" className="hover:text-bianco">Prenota ora</a></li>
             </ul>
           </div>
 
           <div className="col-span-1">
             <h3 className="font-body font-semibold text-lg mb-6">La zona</h3>
             <ul className="space-y-4 text-bianco/80">
-              <li><a href="#" className="hover:text-bianco">Mappa</a></li>
+              <li><a href="/mappa" className="hover:text-bianco">Mappa</a></li>
             </ul>
           </div>
 
@@ -56,7 +55,7 @@ export default function Footer() {
               <a href="#" className="underline hover:text-bianco">Impostazioni Cookies</a>
             </div>
           </div>
-          
+
           <div className="text-xs text-bianco/60 space-y-1">
             <p>CIR: 058091-CAV-17282 | CIN: IT058091B4YXH78MUS | Nome della struttura: Bell Suites | Codice fiscale del titolare: NNBLRI71B67H501R | Codice ISTAT Regione: 12</p>
             <p>Codice ISTAT Provincia: 058 | Codice ISTAT Comune: 091 | Codice ISTAT Categoria: B4</p>
