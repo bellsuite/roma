@@ -44,7 +44,7 @@ export default function TextWithImageLeft({
             {/* Desktop Title & Price */}
             <h2 className="hidden md:block font-heading text-5xl text-blu mb-6">{title}</h2>
             <h3 className="hidden md:block font-heading text-3xl text-blu mb-6">{price}</h3>
-            
+
             <p className="text-grigio-scuro mb-6 text-base">{description}</p>
 
             <h3 className="font-heading text-2xl text-oro-scuro mb-4">Alcune dotazioni della suite:</h3>
@@ -61,7 +61,7 @@ export default function TextWithImageLeft({
 
             <div className="flex gap-4">
               <a href={suitePath} className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 rounded-md">Scopri</a>
-              <a href="#contact-form" className="flex items-center text-blu font-semibold px-4 py-3 rounded-md transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
+              <a target="_blank" href="https://www.airbnb.it/rooms/1785979082607713441" className="flex items-center text-blu font-semibold px-4 py-3 rounded-md transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
             </div>
           </div>
         </div>
