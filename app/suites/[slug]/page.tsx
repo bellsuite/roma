@@ -3,7 +3,6 @@ import Separator from "@/components/Separator";
 import SuitesGeneralDescription from "@/components/SuitesGeneralDescription";
 import SuiteAmenities from "@/components/SuiteAmenities";
 import TiramisuVoucher from "@/components/TiramisuVoucher";
-import ContactForm from "@/components/ContactForm";
 import PointsOfInterest from "@/components/PointsOfInterest";
 import Footer from "@/components/Footer";
 import SuiteGallery from "@/components/SuiteGallery";
@@ -65,10 +64,10 @@ export default async function SuitePage({ params }: { params: Promise<{ slug: st
   return (
     <main className="min-h-screen bg-bianco">
       <Navbar />
-      
+
       <section className="px-padding-global py-16 text-center">
         <h1 className="font-heading text-4xl md:text-5xl text-blu mb-8">Suite romane con un assaggio di dolce vita</h1>
-        
+
         <div className="flex justify-center gap-4 mb-16">
           <a href="/suites/suite-1" className={`px-8 py-3 rounded-md ${slug === 'suite-1' ? 'bg-blu text-bianco' : 'bg-grigio-chiarissimo text-blu'}`}>Suite Palatino</a>
           <a href="/suites/suite-2" className={`px-8 py-3 rounded-md ${slug === 'suite-2' ? 'bg-blu text-bianco' : 'bg-grigio-chiarissimo text-blu'}`}>Suite Aventino</a>
@@ -84,7 +83,6 @@ export default async function SuitePage({ params }: { params: Promise<{ slug: st
       <Separator />
       <TiramisuVoucher />
       <PointsOfInterest />
-      <ContactForm />      
       <Footer />
     </main>
   );

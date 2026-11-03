@@ -4,7 +4,6 @@ import TextWithImageRight from "@/components/TextWithImageRight";
 import TextWithImageLeft from "@/components/TextWithImageLeft";
 import Separator from "@/components/Separator";
 import Testimonials from "@/components/Testimonials";
-import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <TextWithImageRight 
+      <TextWithImageRight
         priority
         title="Suite Palatino, un rifugio tranquillo"
         price="168 EUR a notte"
@@ -31,7 +30,7 @@ export default function Home() {
         suitePath="/suites/suite-1"
       />
       <Separator />
-      <TextWithImageLeft 
+      <TextWithImageLeft
         title="Suite Aventino, un santuario moderno"
         price="168 EUR a notte"
         description="La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite)."
@@ -50,8 +49,6 @@ export default function Home() {
       />
       <Separator />
       <Testimonials />
-      <Separator />
-      <ContactForm />
       <Footer />
     </main>
   );

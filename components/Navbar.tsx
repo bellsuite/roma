@@ -32,6 +32,7 @@ export default function Navbar() {
           </div>
 
           <a href="/mappa" className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150">Mappa</a>
+          <a href="/contatti" className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150">Contatti</a>
         </div>
 
         <div className="ml-auto flex items-center gap-4">
@@ -66,6 +67,7 @@ export default function Navbar() {
             <a href="/suites/suite-1" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Palatino</a>
             <a href="/suites/suite-2" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Suite Aventino</a>
             <a href="/mappa" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Mappa</a>
+            <a href="/contatti" className="font-heading p-4 text-2xl border-b border-white/10 font-semibold">Contatti</a>
             <div className="flex gap-6 p-4 text-4xl">
               <span>🇬🇧</span>
               <span>🇮🇹</span>
