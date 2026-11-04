@@ -1,0 +1,90 @@
+{
+  "welcome": "Bienvenue à Bell Suites Rome",
+  "description": "Deux suites design à San Giovanni, à 4 minutes de la station de métro A. Cuisine complète, Wi-Fi fibre, lave-linge et climatisation. Réservez directement.",
+  "navbar": {
+    "home": "Accueil",
+    "suites": "Suites",
+    "suitePalatino": "Suite Palatino",
+    "suiteAventino": "Suite Aventino",
+    "map": "Carte",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Nouvelle Ouverture 2026",
+    "title": "Bell Suites Rome",
+    "subtitle": "À seulement 4 minutes à pied du Métro A (Re di Roma) et 10 minutes du Métro C (San Giovanni - direction Colisée)",
+    "description": "Deux élégantes suites design de 45 m², entièrement rénovées. L'emplacement stratégique idéal pour vivre Rome, reliées directement à San Giovanni, au Colisée et à la Place d'Espagne.",
+    "cta": "Découvrir les Suites"
+  },
+  "home": {
+    "palatinoTitle": "Suite Palatino, un refuge paisible",
+    "palatinoDesc": "Le tarif comprend : la taxe de séjour et un bon pour le petit-déjeuner chez Pompi (valeur indicative d'environ 2,50 € par invité).",
+    "aventinoTitle": "Suite Aventino, un sanctuaire moderne",
+    "aventinoDesc": "Le tarif comprend : la taxe de séjour et un bon pour le petit-déjeuner chez Pompi (valeur indicative d'environ 2,50 € par invité).",
+    "price": "168 EUR par nuit",
+    "discover": "Découvrir",
+    "book": "Réserver",
+    "features": {
+      "shower": "Douche avec chromothérapie LED",
+      "kitchen": "Cuisine entièrement équipée avec machine à espresso",
+      "wifi": "Wi-Fi fibre optique ultra-rapide (2,5 Gbps)",
+      "climate": "Climatisation et chauffage",
+      "window": "Fenêtres insonorisées",
+      "laundry": "Lave-linge et sèche-linge",
+      "chair": "Canapé-lit double"
+    }
+  },
+  "contatti": {
+    "badge": "Bell Suites Rome",
+    "title": "Contact & Infos Utiles",
+    "subtitle": "Nous sommes à votre entière disposition pour toute information concernant votre séjour à Rome, nos suites ou les modalités de check-in.",
+    "addressTitle": "Adresse de l'Établissement",
+    "addressName": "Bell Suites Rome",
+    "addressText": "Via Domodossola 23\n00183 Rome (RM) - Italie",
+    "mapLink": "Voir sur la carte interactive →",
+    "hostTitle": "Contact Direct de l'Hôte",
+    "host": "Ilaria",
+    "hostDesc": "Pour toute urgence, indications routières en temps réel ou assistance pendant votre séjour, vous pouvez nous contacter directement au :",
+    "whatsapp": "Également disponible via WhatsApp / SMS",
+    "facebook": "Facebook Officiel",
+    "tipsTitle": "Conseils Utiles pour le Check-in",
+    "tipsDesc": "Pour vous garantir une arrivée sans stress et commencer au mieux votre séjour romain, nous vous invitons à suivre ces simples instructions :",
+    "t1Title": "Horaires & Préavis",
+    "t1Desc": "Le check-in standard est disponible à partir de 14h00. Nous vous prions de nous communiquer votre heure d'arrivée prévue ou d'éventuels retards au moins 30 à 60 minutes à l'avance par appel ou WhatsApp.",
+    "t2Title": "Pièces d'Identité",
+    "t2Desc": "Conformément à la législation italienne en vigueur, il est nécessaire de présenter une pièce d'identité valide pour tous les voyageurs à l'arrivée pour l'enregistrement légal.",
+    "t3Title": "Petit-déjeuner & Bon",
+    "t3Desc": "À votre arrivée, nous vous remettrons le bon pour le petit-déjeuner inclus dans le séjour, utilisable à la célèbre Pasticceria Pompi (située à quelques pas Via Albalonga)."
+  },
+  "mappa": {
+    "subtitle": "Découvrez où nous sommes situés et les points d'intérêt à proximité des suites :",
+    "title": "Le B&B au cœur de Rome",
+    "description": "Bell Suites Rome bénéficie d'une position privilégiée, à deux pas du métro Re di Roma et des principaux monuments de la ville."
+  },
+  "pointsOfInterest": {
+    "title": "Points d'intérêt à proximité",
+    "points": [
+      { "number": "2", "description": "Minutes à pied de la pâtisserie Pompi" },
+      { "number": "2", "description": "Stations de métro au total pour rejoindre le Colisée" },
+      { "number": "4", "description": "Minutes à pied de la station de métro Re di Roma" },
+      { "number": "7", "description": "Stations de métro pour rejoindre la Place d'Espagne" },
+      { "number": "10", "description": "Minutes à pied de la Basilique Saint-Jean-de-Latran" },
+      { "number": "3", "description": "Stations de métro pour rejoindre la Basilique Sainte-Marie-Majeure" }
+    ]
+  },
+  "suitesDetail": {
+    "title": "Suites romaines avec un avant-goût de dolce vita",
+    "notFound": "Suite non trouvée"
+  },
+  "footer": {
+    "suites": "Suites",
+    "suitePalatino": "Suite Palatino",
+    "suiteAventino": "Suite Aventino",
+    "zone": "Le quartier",
+    "map": "Carte",
+    "contact": "Contact",
+    "follow": "Suivez-nous",
+    "facebook": "Facebook",
+    "rights": "Tous droits réservés."
+  }
+}

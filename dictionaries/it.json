@@ -1,0 +1,90 @@
+{
+  "welcome": "Benvenuti a Bell Suites Roma",
+  "description": "Due suite di design a San Giovanni, a 4 minuti dalla Metro A. Cucina completa, Wi-Fi in fibra, lavatrice e aria condizionata. Prenota direttamente.",
+  "navbar": {
+    "home": "Home",
+    "suites": "Le Suite",
+    "suitePalatino": "Suite Palatino",
+    "suiteAventino": "Suite Aventino",
+    "map": "Mappa",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "badge": "Nuovissima Apertura 2026",
+    "title": "Bell Suites Roma",
+    "subtitle": "A soli 4 minuti a piedi dalla Metro A (Re di Roma) e 10 minuti a piedi dalla Metro C (San Giovanni - direzione Colosseo)",
+    "description": "Due eleganti suite di design da 45 mq, completamente ristrutturate. La posizione strategica perfetta per vivere Roma, collegata direttamente a San Giovanni, il Colosseo e Piazza di Spagna.",
+    "cta": "Scopri le Suite"
+  },
+  "home": {
+    "palatinoTitle": "Suite Palatino, un rifugio tranquillo",
+    "palatinoDesc": "La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite).",
+    "aventinoTitle": "Suite Aventino, un santuario moderno",
+    "aventinoDesc": "La tariffa comprende: tassa di soggiorno e un voucher colazione presso Pompi (valore indicativo di circa 2,50 EUR per ospite).",
+    "price": "168 EUR a notte",
+    "discover": "Scopri",
+    "book": "Prenota",
+    "features": {
+      "shower": "Doccia con cromoterapia LED",
+      "kitchen": "Una cucina completamente attrezzata con macchina per espresso",
+      "wifi": "Connessione Wi-Fi in fibra ottica ultra veloce (2,5 Gbps)",
+      "climate": "Aria condizionata e riscaldamento",
+      "window": "Finestre insonorizzate",
+      "laundry": "Lavatrice e asciugatrice",
+      "chair": "Divano letto matrimoniale"
+    }
+  },
+  "contatti": {
+    "badge": "Bell Suites Roma",
+    "title": "Contatti & Info Utili",
+    "subtitle": "Siamo a tua completa disposizione per qualsiasi informazione sul tuo soggiorno a Roma, le nostre suite o le modalità di check-in.",
+    "addressTitle": "Indirizzo della Struttura",
+    "addressName": "Bell Suites Roma",
+    "addressText": "Via Domodossola 23\n00183 Roma (RM) - Italia",
+    "mapLink": "Visualizza sulla mappa interattiva →",
+    "hostTitle": "Contatti Diretti dell'Host",
+    "host": "Ilaria",
+    "hostDesc": "Per urgenze, indicazioni stradali in tempo reale o assistenza durante il soggiorno, puoi contattarci direttamente al numero:",
+    "whatsapp": "Disponibile anche via WhatsApp / SMS",
+    "facebook": "Facebook Ufficiale",
+    "tipsTitle": "Consigli Utili per il Check-in",
+    "tipsDesc": "Per garantirti un arrivo senza stress e iniziare al meglio il tuo soggiorno romano, ti invitiamo a seguire queste semplici indicazioni:",
+    "t1Title": "Orari & Preavviso",
+    "t1Desc": "Il check-in standard è disponibile dalle 14:00 in poi. Ti chiediamo di comunicarci il tuo orario d'arrivo previsto o eventuali ritardi almeno 30-60 minuti prima tramite chiamata o WhatsApp.",
+    "t2Title": "Documenti d'Identità",
+    "t2Desc": "Come richiesto dalla normativa italiana vigente, all'arrivo è necessario esibire un documento d'identità in corso di validità di tutti gli ospiti per la registrazione di legge.",
+    "t3Title": "Colazione & Voucher",
+    "t3Desc": "All'arrivo ti consegneremo il voucher colazione incluso nel soggiorno, utilizzabile presso la rinomata Pasticceria Pompi (situata a pochi passi in Via Albalonga)."
+  },
+  "mappa": {
+    "subtitle": "Scopri dove ci troviamo e i punti di interesse più vicini alle suites:",
+    "title": "Il B&B nel cuore di Roma",
+    "description": "Bell Suites Roma si trova in una posizione privilegiata, a due passi dalla metro Re di Roma e dai principali monumenti della città."
+  },
+  "pointsOfInterest": {
+    "title": "Punti di interesse nelle vicinanze",
+    "points": [
+      { "number": "2", "description": "Minuti a piedi dalla pasticceria Pompi" },
+      { "number": "2", "description": "Fermate in totale di metropolitana per raggiungere il Colosseo" },
+      { "number": "4", "description": "Minuti a piedi dalla fermata della metropolitana Re di Roma" },
+      { "number": "7", "description": "Fermate di metropolitana per raggiungere Piazza di Spagna" },
+      { "number": "10", "description": "Minuti a piedi dalla Basilica di San Giovanni in Laterano" },
+      { "number": "3", "description": "Fermate di metropolitana per raggiungere la Basilica di Santa Maria Maggiore" }
+    ]
+  },
+  "suitesDetail": {
+    "title": "Suite romane con un assaggio di dolce vita",
+    "notFound": "Suite non trovata"
+  },
+  "footer": {
+    "suites": "Le Suite",
+    "suitePalatino": "Suite Palatino",
+    "suiteAventino": "Suite Aventino",
+    "zone": "La zona",
+    "map": "Mappa",
+    "contact": "Contatti",
+    "follow": "Seguici",
+    "facebook": "Facebook",
+    "rights": "Tutti i diritti riservati."
+  }
+}

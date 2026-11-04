@@ -1,11 +1,11 @@
-import Navbar from "@/components/Navbar";
 import Separator from "@/components/Separator";
 import SuitesGeneralDescription from "@/components/SuitesGeneralDescription";
 import SuiteAmenities from "@/components/SuiteAmenities";
 import TiramisuVoucher from "@/components/TiramisuVoucher";
 import PointsOfInterest from "@/components/PointsOfInterest";
-import Footer from "@/components/Footer";
 import SuiteGallery from "@/components/SuiteGallery";
+import { getDictionary } from "@/app/dictionaries";
+
 const suitesData: { [key: string]: { name: string; photos: string[]; video?: string } } = {
   "suite-1": {
     name: "Suite Palatino",
@@ -47,15 +47,19 @@ const suitesData: { [key: string]: { name: string; photos: string[]; video?: str
   },
 };
 
-export default async function SuitePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function SuitePage({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>;
+}) {
+  const { lang, slug } = await params;
+  const dict = await getDictionary(lang as 'it' | 'en');
   const suite = suitesData[slug];
 
   if (!suite) {
-    return <div>Suite non trovata</div>;
+    return <div>{dict.suitesDetail.notFound}</div>;
   }
 
-  // Combine photos and video into a single media array for the gallery, placing video as the 4th item (index 3)
   const media = [...suite.photos];
   if (suite.video) {
     media.splice(3, 0, suite.video);
@@ -63,27 +67,36 @@ export default async function SuitePage({ params }: { params: Promise<{ slug: st
 
   return (
     <main className="min-h-screen bg-bianco">
-      <Navbar />
-
       <section className="px-padding-global py-16 text-center">
-        <h1 className="font-heading text-4xl md:text-5xl text-blu mb-8">Suite romane con un assaggio di dolce vita</h1>
+        <h1 className="font-heading text-4xl md:text-5xl text-blu mb-8">{dict.suitesDetail.title}</h1>
 
         <div className="flex justify-center gap-4 mb-16">
-          <a href="/suites/suite-1" className={`px-8 py-3 rounded-md ${slug === 'suite-1' ? 'bg-blu text-bianco' : 'bg-grigio-chiarissimo text-blu'}`}>Suite Palatino</a>
-          <a href="/suites/suite-2" className={`px-8 py-3 rounded-md ${slug === 'suite-2' ? 'bg-blu text-bianco' : 'bg-grigio-chiarissimo text-blu'}`}>Suite Aventino</a>
+          <a
+            href={`/${lang}/suites/suite-1`}
+            className={`px-8 py-3 rounded-md ${
+              slug === 'suite-1' ? 'bg-blu text-bianco' : 'bg-grigio-chiarissimo text-blu'
+            }`}
+          >
+            Suite Palatino
+          </a>
+          <a
+            href={`/${lang}/suites/suite-2`}
+            className={`px-8 py-3 rounded-md ${
+              slug === 'suite-2' ? 'bg-blu text-bianco' : 'bg-grigio-chiarissimo text-blu'
+            }`}
+          >
+            Suite Aventino
+          </a>
         </div>
 
-
         <SuiteGallery media={media} name={suite.name} />
-
       </section>
 
       <SuitesGeneralDescription />
       <SuiteAmenities />
       <Separator />
       <TiramisuVoucher />
-      <PointsOfInterest />
-      <Footer />
+      <PointsOfInterest lang={lang} />
     </main>
   );
 }

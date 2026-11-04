@@ -1,15 +1,10 @@
 import React from 'react';
+import { getDictionary } from "@/app/dictionaries";
 
-const points = [
-  { number: '2', description: 'Minuti a piedi dalla pasticceria Pompi' },
-  { number: '2', description: 'Fermate in totale di metropolitana per raggiungere il Colosseo' },
-  { number: '4', description: 'Minuti a piedi dalla fermata della metropolitana Re di Roma' },
-  { number: '7', description: 'Fermate di metropolitana per raggiungere Piazza di Spagna' },
-  { number: '10', description: 'Minuti a piedi dalla Basilica di San Giovanni in Laterano' },
-  { number: '3', description: 'Fermate di metropolitana per raggiungere la Basilica di Santa Maria Maggiore (dove è sepolto Papa Francesco)' },
-];
+export default async function PointsOfInterest({ lang = 'it' }: { lang?: string }) {
+  const dict = await getDictionary(lang as 'it' | 'en');
+  const poi = dict.pointsOfInterest;
 
-export default function PointsOfInterest() {
   return (
     <section className="relative w-full py-section-padding-large px-padding-global bg-blu mt-24">
       {/* Hero Background with Overlay */}
@@ -24,11 +19,11 @@ export default function PointsOfInterest() {
 
       <div className="relative z-10 max-w-container-large mx-auto py-24">
         <h2 className="text-3xl md:text-5xl font-sans text-white mb-16">
-          Punti di interesse nelle vicinanze
+          {poi.title}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-x-16 md:gap-y-20">
-          {points.map((point, index) => (
+          {poi.points.map((point: { number: string; description: string }, index: number) => (
             <div key={index} className="flex items-start pl-6 border-l border-white">
               <div className="flex flex-col items-left md:items-start max-w-xs py-4">
                 <span className="text-6xl md:text-8xl font-heading text-white mb-4">
