@@ -52,10 +52,10 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
               </p>
               <div className="mb-6">
                 <a
-                  href="tel:+393331234567"
+                  href="tel:+39 3920261228"
                   className="text-2xl font-heading text-blu hover:text-oro-scuro transition-colors block mb-2"
                 >
-                  +39 333 1234567
+                  +39 3920261228
                 </a>
                 <p className="text-xs text-grigio">{c.whatsapp}</p>
               </div>
