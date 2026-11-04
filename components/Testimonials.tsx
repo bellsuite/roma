@@ -59,50 +59,20 @@ function formatMonthOnly(date?: string): string {
 export const defaultReviews: TestimonialReview[] = [
   {
     quote:
-      "Signora buongiorno le volevamo fare i complimenti per i due appartamentini che ci ha dato, veramente belli, comodi e funzionale grazie per la sua disponibilità. Speriamo di rivederci a presto e grazie ancora per averci ospitati. Buona giornata",
-    name: "Giuseppe P.",
-    location: "Ragusa, Italia",
-    initials: "GP",
-    date: "Settembre 2026",
+      "Excelente me encantó la estadía! Lugar céntrico y bien conectado con las principales atracciones de la ciudad.",
+    name: "Gabriela",
+    location: "Caracas, Venezuela",
+    initials: "GB",
+    date: "Novembre 2026",
     rating: 5,
     source: "Airbnb",
   },
   {
     quote:
-      "Everything was absolutely perfect! The apartment was wonderful, and the staff provided exceptional service throughout our stay. We had a fantastic experience and will definitely be back! Highly recommended!",
-    name: "Armine",
-    location: "Yerevan, Armenia",
-    initials: "A",
-    date: "Ottobre 2026",
-    rating: 5,
-    source: "Airbnb",
-  },
-  {
-    quote:
-      "Great host, the space was super clean and lots of space ! She was really nice and gave me some coupons for croissants and coffee ! Amazing place",
-    name: "Victoria",
-    location: "Monterrey, Messico",
-    initials: "V",
-    date: "Ottobre 2026",
-    rating: 5,
-    source: "Airbnb",
-  },
-  {
-    quote:
-      "Our stay was fantastic from start to finish! The space was beautiful, well-maintained, and equipped with everything we needed. The bed was extremely comfortable / The location made it so easy to walk to nearby cafes, supermarkets etc.Ilaria was an excellent host—communication was clear and welcoming throughout. We would definitely love to stay here again😊 10/10👏",
-    name: "Nardos",
-    location: "1 anno su Airbnb",
-    initials: "N",
-    date: "Ottobre 2026",
-    rating: 5,
-    source: "Airbnb",
-  },
-  {
-    quote:
-      "Il soggiorno nell'appartamento di Ilaria è stato super. La casa è davvero bella e confortevole. C'è grande cura del dettaglio e la pulizia era egregia. La posizione è comoda, vicino alla metro linea A da cui ti colleghi a tutto. In fase di check out Ilaria è stata davvero gentile e ci ha ospitato i bagagli oltre il tempo consentito. Questo è stato molto importante perché ci ha permesso di visitare anche il giorno di rientro. Consigliatissimo",
-    name: "Erika",
-    location: "6 mesi su Airbnb",
-    initials: "E",
+      "Appartement tout neuf à 5 min du métro . Hauts plafonds, cuisine et bain aménagés, climatisation, sèche cheveux, machine à laver , lave vaisselle... tout parfait . Excellent accueil de notre hôte !",
+    name: "José Manuel",
+    location: "5 anni su Airbnb",
+    initials: "JM",
     date: "Ottobre 2026",
     rating: 5,
     source: "Airbnb",
@@ -119,11 +89,51 @@ export const defaultReviews: TestimonialReview[] = [
   },
   {
     quote:
-      "Appartement tout neuf à 5 min du métro . Hauts plafonds, cuisine et bain aménagés, climatisation, sèche cheveux, machine à laver , lave vaisselle... tout parfait . Excellent accueil de notre hôte !",
-    name: "José Manuel",
-    location: "5 anni su Airbnb",
-    initials: "JM",
+      "Il soggiorno nell'appartamento di Ilaria è stato super. La casa è davvero bella e confortevole. C'è grande cura del dettaglio e la pulizia era egregia. La posizione è comoda, vicino alla metro linea A da cui ti colleghi a tutto. In fase di check out Ilaria è stata davvero gentile e ci ha ospitato i bagagli oltre il tempo consentito. Questo è stato molto importante perché ci ha permesso di visitare anche il giorno di rientro. Consigliatissimo",
+    name: "Erika",
+    location: "6 mesi su Airbnb",
+    initials: "E",
     date: "Ottobre 2026",
+    rating: 5,
+    source: "Airbnb",
+  },
+  {
+    quote:
+      "Our stay was fantastic from start to finish! The space was beautiful, well-maintained, and equipped with everything we needed. The bed was extremely comfortable / The location made it so easy to walk to nearby cafes, supermarkets etc.Ilaria was an excellent host—communication was clear and welcoming throughout. We would definitely love to stay here again😊 10/10👏",
+    name: "Nardos",
+    location: "1 anno su Airbnb",
+    initials: "N",
+    date: "Ottobre 2026",
+    rating: 5,
+    source: "Airbnb",
+  },
+  {
+    quote:
+      "Great host, the space was super clean and lots of space ! She was really nice and gave me some coupons for croissants and coffee ! Amazing place",
+    name: "Victoria",
+    location: "Monterrey, Messico",
+    initials: "V",
+    date: "Ottobre 2026",
+    rating: 5,
+    source: "Airbnb",
+  },
+  {
+    quote:
+      "Everything was absolutely perfect! The apartment was wonderful, and the staff provided exceptional service throughout our stay. We had a fantastic experience and will definitely be back! Highly recommended!",
+    name: "Armine",
+    location: "Yerevan, Armenia",
+    initials: "A",
+    date: "Ottobre 2026",
+    rating: 5,
+    source: "Airbnb",
+  },
+  {
+    quote:
+      "Signora buongiorno le volevamo fare i complimenti per i due appartamentini che ci ha dato, veramente belli, comodi e funzionale grazie per la sua disponibilità. Speriamo di rivederci a presto e grazie ancora per averci ospitati. Buona giornata",
+    name: "Giuseppe P.",
+    location: "Ragusa, Italia",
+    initials: "GP",
+    date: "Settembre 2026",
     rating: 5,
     source: "Airbnb",
   },
@@ -152,7 +162,7 @@ export default function Testimonials({
   // Indice logico per i pallini (0-based sul numero di slide reali)
   const dotIndex = trackIndex <= 0 ? totalReviews - 1
     : trackIndex >= totalReviews + 1 ? 0
-    : trackIndex - 1;
+      : trackIndex - 1;
 
   // Lista estesa con clone inizio/fine
   const extendedReviews =
@@ -366,9 +376,14 @@ export default function Testimonials({
                       <div className="mt-2.5 flex items-center justify-between px-1 text-xs text-grigio">
                         <span className="flex items-center gap-1.5">
                           <span>Fonte:</span>
-                          <span className="font-semibold text-blu">
+                          <a
+                            href="https://www.airbnb.it/rooms/1785979082607713441/reviews?source_impression_id=p3_1793832297_P3580Bg0XSZFMHhI&scroll_to_review=1794078814248184591&review_page_entrypoint=pdp_header"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-blu hover:underline"
+                          >
                             {review.source ?? "Airbnb"}
-                          </span>
+                          </a>
                         </span>
                         <span className="text-[11px] text-grigio/80">Recensione verificata</span>
                       </div>

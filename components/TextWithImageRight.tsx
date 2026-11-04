@@ -10,6 +10,8 @@ export default function TextWithImageRight({
   imageAlt,
   priority = false,
   suitePath,
+  discoverText = "Scopri",
+  bookText = "Prenota",
 }: {
   title: string;
   price: string;
@@ -19,6 +21,8 @@ export default function TextWithImageRight({
   imageAlt: string;
   priority?: boolean;
   suitePath: string;
+  discoverText?: string;
+  bookText?: string;
 }) {
   return (
     <section className="px-padding-global bg-bianco">
@@ -52,8 +56,8 @@ export default function TextWithImageRight({
           </ul>
 
           <div className="flex gap-4">
-            <a href={suitePath} className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 hover:cursor-pointer rounded-md">Scopri</a>
-            <a target="_blank" href="https://www.airbnb.it/rooms/1779666948472189317" className="flex items-center text-blu font-semibold px-4 py-3 rounded-md transition-colors duration-150 hover:bg-blu/10">Prenota {">"}</a>
+            <a href={suitePath} className="bg-blu text-bianco px-8 py-3 font-semibold transition-colors duration-150 hover:bg-blu/80 hover:cursor-pointer rounded-md">{discoverText}</a>
+            <a target="_blank" href="https://www.airbnb.it/rooms/1779666948472189317" className="flex items-center text-blu font-semibold px-4 py-3 rounded-md transition-colors duration-150 hover:bg-blu/10">{bookText} {">"}</a>
           </div>
         </div>
 

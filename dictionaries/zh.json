@@ -1,0 +1,90 @@
+{
+  "welcome": "欢迎来到罗马贝尔套房",
+  "description": "位于圣乔瓦尼的两间设计套房，距离地铁A线仅4分钟路程。设施齐全的厨房、光纤Wi-Fi、洗衣机和空调。直接预订。",
+  "navbar": {
+    "home": "首页",
+    "suites": "套房",
+    "suitePalatino": "帕拉蒂诺套房",
+    "suiteAventino": "阿文蒂诺套房",
+    "map": "地图",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "badge": "2026全新开业",
+    "title": "罗马贝尔套房",
+    "subtitle": "距离地铁A线 (Re di Roma) 仅4分钟步行路程，距离地铁C线 (San Giovanni - 往斗兽场方向) 10分钟步行路程",
+    "description": "两间优雅的45平米全翻新设计套房。体验罗马的绝佳战略位置，直达圣乔瓦尼、斗兽场和西班牙广场。",
+    "cta": "探索套房"
+  },
+  "home": {
+    "palatinoTitle": "帕拉蒂诺套房，一处宁静的避难所",
+    "palatinoDesc": "房价包含：城市税以及Pompi早餐券（每位客人约合2.50欧元）。",
+    "aventinoTitle": "阿文蒂诺套房，一座现代化的圣殿",
+    "aventinoDesc": "房价包含：城市税以及Pompi早餐券（每位客人约合2.50欧元）。",
+    "price": "每晚 168 欧元",
+    "discover": "探索",
+    "book": "预订",
+    "features": {
+      "shower": "LED光疗淋浴",
+      "kitchen": "配有浓缩咖啡机的全套厨房",
+      "wifi": "超高速光纤Wi-Fi (2.5 Gbps)",
+      "climate": "空调与暖气",
+      "window": "隔音窗户",
+      "laundry": "洗衣机与烘干机",
+      "chair": "双人沙发床"
+    }
+  },
+  "contatti": {
+    "badge": "罗马贝尔套房",
+    "title": "联系方式与实用信息",
+    "subtitle": "我们随时竭诚为您解答有关罗马住宿、套房或入住手续的任何疑问。",
+    "addressTitle": "民宿地址",
+    "addressName": "罗马贝尔套房",
+    "addressText": "Via Domodossola 23\n00183 罗马 (RM) - 意大利",
+    "mapLink": "在互动地图上查看 →",
+    "hostTitle": "房东直接联系方式",
+    "host": "伊拉里亚",
+    "hostDesc": "如有紧急情况、实时路线指引或入住期间的协助，您可以直接通过以下方式联系我们：",
+    "whatsapp": "亦可通过 WhatsApp / 短信联系",
+    "facebook": "官方脸书",
+    "tipsTitle": "入住实用建议",
+    "tipsDesc": "为了确保您无忧抵达并开启美好的罗马之旅，请遵循以下简单说明：",
+    "t1Title": "时间与提前通知",
+    "t1Desc": "标准入住时间为下午2:00开始。请至少在抵达前30-60分钟通过电话或WhatsApp告知我们您的预计抵达时间或任何延误情况。",
+    "t2Title": "身份证明文件",
+    "t2Desc": "根据意大利现行法律要求，所有客人在抵达时必须出示有效的身份证件以进行法定登记。",
+    "t3Title": "早餐与餐券",
+    "t3Desc": "抵达时，我们将为您提供包含在住宿中的早餐券，可在著名的 Pompi 甜品店（位于 Via Albalonga 几步之遥）使用。"
+  },
+  "mappa": {
+    "subtitle": "探索我们的位置以及套房附近的旅游景点：",
+    "title": "罗马市中心的B&B民宿",
+    "description": "Bell Suites Roma 坐落于优越的地理位置，距离 Re di Roma 地铁站和城市主要古迹仅几步之遥。"
+  },
+  "pointsOfInterest": {
+    "title": "附近景点",
+    "points": [
+      { "number": "2", "description": "步行几分钟即可到达 Pompi 甜品店" },
+      { "number": "2", "description": "乘坐地铁总共2站即可到达斗兽场" },
+      { "number": "4", "description": "步行4分钟即可到达 Re di Roma 地铁站" },
+      { "number": "7", "description": "乘坐地铁7站即可到达西班牙广场" },
+      { "number": "10", "description": "步行10分钟即可到达圣若望拉特朗大殿" },
+      { "number": "3", "description": "乘坐地铁3站即可到达圣母大殿" }
+    ]
+  },
+  "suitesDetail": {
+    "title": "带有甜蜜生活风情的罗马套房",
+    "notFound": "未找到套房"
+  },
+  "footer": {
+    "suites": "套房",
+    "suitePalatino": "帕拉蒂诺套房",
+    "suiteAventino": "阿文蒂诺套房",
+    "zone": "周边区域",
+    "map": "地图",
+    "contact": "联系我们",
+    "follow": "关注我们",
+    "facebook": "Facebook",
+    "rights": "版权所有。"
+  }
+}

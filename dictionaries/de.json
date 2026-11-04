@@ -1,0 +1,90 @@
+{
+  "welcome": "Willkommen in den Bell Suites Rom",
+  "description": "Zwei Design-Suites in San Giovanni, 4 Minuten von der U-Bahn-Linie A entfernt. Voll ausgestattete Küche, Glasfaser-WLAN, Waschmaschine und Klimaanlage. Direkt buchen.",
+  "navbar": {
+    "home": "Startseite",
+    "suites": "Suites",
+    "suitePalatino": "Palatino Suite",
+    "suiteAventino": "Aventino Suite",
+    "map": "Karte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Neueröffnung 2026",
+    "title": "Bell Suites Rom",
+    "subtitle": "Nur 4 Gehminuten von der Metro A (Re di Roma) und 10 Gehminuten von der Metro C (San Giovanni - Richtung Kolosseum) entfernt",
+    "description": "Zwei elegante, komplett renovierte 45 qm große Design-Suites. Die ideale strategische Lage, um Rom zu erleben, mit direkter Verbindung nach San Giovanni, zum Kolosseum und zur Spanischen Treppe.",
+    "cta": "Suites entdecken"
+  },
+  "home": {
+    "palatinoTitle": "Palatino Suite, ein ruhiger Rückzugsort",
+    "palatinoDesc": "Der Preis beinhaltet: Kurtaxe und einen Frühstücksgutschein bei Pompi (ungefährer Wert von ca. 2,50 € pro Gast).",
+    "aventinoTitle": "Aventino Suite, ein modernes Heiligtum",
+    "aventinoDesc": "Der Preis beinhaltet: Kurtaxe und einen Frühstücksgutschein bei Pompi (ungefährer Wert von ca. 2,50 € pro Gast).",
+    "price": "168 EUR pro Nacht",
+    "discover": "Entdecken",
+    "book": "Buchen",
+    "features": {
+      "shower": "Dusche mit LED-Farbtherapie",
+      "kitchen": "Voll ausgestattete Küche mit Espressomaschine",
+      "wifi": "Ultraschnelles Glasfaser-WLAN (2,5 Gbps)",
+      "climate": "Klimaanlage und Heizung",
+      "window": "Schalldämmende Fenster",
+      "laundry": "Waschmaschine und Trockner",
+      "chair": "Doppelschlafsofa"
+    }
+  },
+  "contatti": {
+    "badge": "Bell Suites Rom",
+    "title": "Kontakt & Nützliche Infos",
+    "subtitle": "Wir stehen Ihnen für alle Informationen rund um Ihren Aufenthalt in Rom, unsere Suites oder den Check-in gerne zur Verfügung.",
+    "addressTitle": "Adresse der Unterkunft",
+    "addressName": "Bell Suites Rom",
+    "addressText": "Via Domodossola 23\n00183 Rom (RM) - Italien",
+    "mapLink": "Auf interaktiver Karte anzeigen →",
+    "hostTitle": "Direkter Kontakt zum Gastgeber",
+    "host": "Ilaria",
+    "hostDesc": "Für Notfälle, Wegbeschreibungen in Echtzeit oder Unterstützung während Ihres Aufenthalts können Sie uns direkt kontaktieren unter:",
+    "whatsapp": "Auch über WhatsApp / SMS erreichbar",
+    "facebook": "Offizielles Facebook",
+    "tipsTitle": "Nützliche Tipps für den Check-in",
+    "tipsDesc": "Um Ihnen eine stressfreie Ankunft zu garantieren und Ihren Rom-Aufenthalt optimal zu beginnen, bitten wir Sie, diese einfachen Hinweise zu beachten:",
+    "t1Title": "Zeiten & Ankündigung",
+    "t1Desc": "Der Standard-Check-in ist ab 14:00 Uhr möglich. Bitte teilen Sie uns Ihre voraussichtliche Ankunftszeit oder eventuelle Verzögerungen mindestens 30-60 Minuten im Voraus telefonisch oder per WhatsApp mit.",
+    "t2Title": "Ausweisdokumente",
+    "t2Desc": "Gemäß den geltenden italienischen Bestimmungen ist bei der Ankunft die Vorlage eines gültigen Ausweisdokuments aller Gäste für die gesetzliche Registrierung erforderlich.",
+    "t3Title": "Frühstück & Gutschein",
+    "t3Desc": "Bei Ihrer Ankunft überreichen wir Ihnen den im Aufenthalt inbegriffen Frühstücksgutschein, einlösbar in der renommierten Pasticceria Pompi (nur wenige Schritte entfernt in der Via Albalonga)."
+  },
+  "mappa": {
+    "subtitle": "Entdecken Sie unseren Standort und die Sehenswürdigkeiten in der Nähe der Suites:",
+    "title": "Das B&B im Herzen von Rom",
+    "description": "Bell Suites Rom liegt in einer privilegierten Lage, nur wenige Schritte von der Metro Re di Roma und den wichtigsten Sehenswürdigkeiten der Stadt entfernt."
+  },
+  "pointsOfInterest": {
+    "title": "Sehenswürdigkeiten in der Nähe",
+    "points": [
+      { "number": "2", "description": "Gehminuten von der Pasticceria Pompi" },
+      { "number": "2", "description": "Insgesamt U-Bahn-Stationen bis zum Kolosseum" },
+      { "number": "4", "description": "Gehminuten zur U-Bahn-Haltestelle Re di Roma" },
+      { "number": "7", "description": "U-Bahn-Stationen bis zur Spanischen Treppe" },
+      { "number": "10", "description": "Gehminuten zur Basilika San Giovanni in Laterano" },
+      { "number": "3", "description": "U-Bahn-Stationen zur Basilika Santa Maria Maggiore" }
+    ]
+  },
+  "suitesDetail": {
+    "title": "Römische Suites mit einem Hauch von La Dolce Vita",
+    "notFound": "Suite nicht gefunden"
+  },
+  "footer": {
+    "suites": "Suites",
+    "suitePalatino": "Palatino Suite",
+    "suiteAventino": "Aventino Suite",
+    "zone": "Die Umgebung",
+    "map": "Karte",
+    "contact": "Kontakt",
+    "follow": "Folgen Sie uns",
+    "facebook": "Facebook",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

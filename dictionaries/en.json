@@ -1,0 +1,90 @@
+{
+  "welcome": "Welcome to Bell Suites Rome",
+  "description": "Two design suites in San Giovanni, 4 minutes from Metro A. Fully equipped kitchen, fiber Wi-Fi, washing machine and air conditioning. Book directly.",
+  "navbar": {
+    "home": "Home",
+    "suites": "Suites",
+    "suitePalatino": "Palatino Suite",
+    "suiteAventino": "Aventino Suite",
+    "map": "Map",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "New Opening 2026",
+    "title": "Bell Suites Rome",
+    "subtitle": "Only 4 minutes walk from Metro A (Re di Roma) and 10 minutes walk from Metro C (San Giovanni - direction Colosseum)",
+    "description": "Two elegant 45 sqm design suites, fully renovated. The perfect strategic location to experience Rome, directly connected to San Giovanni, the Colosseum and the Spanish Steps.",
+    "cta": "Discover the Suites"
+  },
+  "home": {
+    "palatinoTitle": "Palatino Suite, a quiet retreat",
+    "palatinoDesc": "Rate includes: city tax and a breakfast voucher at Pompi (approximate value of €2.50 per guest).",
+    "aventinoTitle": "Aventino Suite, a modern sanctuary",
+    "aventinoDesc": "Rate includes: city tax and a breakfast voucher at Pompi (approximate value of €2.50 per guest).",
+    "price": "168 EUR per night",
+    "discover": "Discover",
+    "book": "Book",
+    "features": {
+      "shower": "LED chromotherapy shower",
+      "kitchen": "Fully equipped kitchen with espresso machine",
+      "wifi": "Ultra-fast fiber optic Wi-Fi (2.5 Gbps)",
+      "climate": "Air conditioning and heating",
+      "window": "Soundproof windows",
+      "laundry": "Washing machine and dryer",
+      "chair": "Double sofa bed"
+    }
+  },
+  "contatti": {
+    "badge": "Bell Suites Rome",
+    "title": "Contact & Useful Info",
+    "subtitle": "We are at your disposal for any information about your stay in Rome, our suites, or check-in procedures.",
+    "addressTitle": "Property Address",
+    "addressName": "Bell Suites Rome",
+    "addressText": "Via Domodossola 23\n00183 Rome (RM) - Italy",
+    "mapLink": "View on interactive map →",
+    "hostTitle": "Host Direct Contact",
+    "host": "Ilaria",
+    "hostDesc": "For emergencies, real-time directions, or assistance during your stay, you can contact us directly at:",
+    "whatsapp": "Also available via WhatsApp / SMS",
+    "facebook": "Official Facebook",
+    "tipsTitle": "Check-in Useful Tips",
+    "tipsDesc": "To guarantee a stress-free arrival and start your Roman stay at its best, please follow these simple instructions:",
+    "t1Title": "Times & Notice",
+    "t1Desc": "Standard check-in is available from 2:00 PM onwards. Please let us know your expected arrival time or any delays at least 30-60 minutes in advance via call or WhatsApp.",
+    "t2Title": "Identity Documents",
+    "t2Desc": "As required by current Italian legislation, valid identity documents for all guests must be presented upon arrival for legal registration.",
+    "t3Title": "Breakfast & Voucher",
+    "t3Desc": "Upon arrival we will give you the breakfast voucher included in your stay, usable at the renowned Pasticceria Pompi (located a few steps away in Via Albalonga)."
+  },
+  "mappa": {
+    "subtitle": "Discover where we are located and points of interest near the suites:",
+    "title": "The B&B in the heart of Rome",
+    "description": "Bell Suites Roma is in a privileged position, a stone's throw from Re di Roma metro and the city's main monuments."
+  },
+  "pointsOfInterest": {
+    "title": "Nearby points of interest",
+    "points": [
+      { "number": "2", "description": "Minutes walk from Pompi pastry shop" },
+      { "number": "2", "description": "Total metro stops to reach the Colosseum" },
+      { "number": "4", "description": "Minutes walk from Re di Roma metro station" },
+      { "number": "7", "description": "Metro stops to reach Spanish Steps" },
+      { "number": "10", "description": "Minutes walk from the Basilica of Saint John Lateran" },
+      { "number": "3", "description": "Metro stops to reach the Basilica of Saint Mary Major" }
+    ]
+  },
+  "suitesDetail": {
+    "title": "Roman suites with a taste of la dolce vita",
+    "notFound": "Suite not found"
+  },
+  "footer": {
+    "suites": "Suites",
+    "suitePalatino": "Palatino Suite",
+    "suiteAventino": "Aventino Suite",
+    "zone": "The area",
+    "map": "Map",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "facebook": "Facebook",
+    "rights": "All rights reserved."
+  }
+}
