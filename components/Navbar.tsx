@@ -37,7 +37,7 @@ export default function Navbar({ lang = "it", dict }: NavbarProps) {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center justify-start gap-8 font-semibold text-[18px] ml-16">
-          <a href={`/${lang}`} className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150">{t.home}</a>
+          <a href={`/${lang}`} className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150 cursor-pointer">{t.home}</a>
 
           <div className="relative group cursor-pointer p-2">
             <span className="group-hover:bg-white/20 p-2 rounded-md flex items-center gap-2 transition-colors duration-150">
@@ -47,13 +47,13 @@ export default function Navbar({ lang = "it", dict }: NavbarProps) {
               </svg>
             </span>
             <div className="absolute left-0 mt-2 w-48 bg-blu text-bianco hidden group-hover:block p-2 z-[60] shadow-lg rounded-md">
-              <a href={`/${lang}/suites/suite-1`} className="block hover:bg-white/20 p-2 rounded-md mb-1 transition-colors duration-150">{t.suitePalatino}</a>
-              <a href={`/${lang}/suites/suite-2`} className="block hover:bg-white/20 p-2 rounded-md transition-colors duration-150">{t.suiteAventino}</a>
+              <a href={`/${lang}/suites/suite-1`} className="block hover:bg-white/20 p-2 rounded-md mb-1 transition-colors duration-150 cursor-pointer">{t.suitePalatino}</a>
+              <a href={`/${lang}/suites/suite-2`} className="block hover:bg-white/20 p-2 rounded-md transition-colors duration-150 cursor-pointer">{t.suiteAventino}</a>
             </div>
           </div>
 
-          <a href={`/${lang}/mappa`} className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150">{t.map}</a>
-          <a href={`/${lang}/contatti`} className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150">{t.contact}</a>
+          <a href={`/${lang}/mappa`} className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150 cursor-pointer">{t.map}</a>
+          <a href={`/${lang}/contatti`} className="hover:bg-white/20 p-2 rounded-md transition-colors duration-150 cursor-pointer">{t.contact}</a>
         </div>
 
         <div className="ml-auto flex items-center gap-4">
@@ -73,14 +73,12 @@ export default function Navbar({ lang = "it", dict }: NavbarProps) {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="absolute top-full left-0 w-full bg-blu p-padding-global lg:hidden flex flex-col gap-6 z-[50] pb-8 shadow-2xl">
-            <a href={`/${lang}`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold" onClick={() => setIsOpen(false)}>{t.home}</a>
-            <a href={`/${lang}/suites/suite-1`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold" onClick={() => setIsOpen(false)}>{t.suitePalatino}</a>
-            <a href={`/${lang}/suites/suite-2`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold" onClick={() => setIsOpen(false)}>{t.suiteAventino}</a>
-            <a href={`/${lang}/mappa`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold" onClick={() => setIsOpen(false)}>{t.map}</a>
-            <a href={`/${lang}/contatti`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold" onClick={() => setIsOpen(false)}>{t.contact}</a>
-            <div className="p-4">
-              <LocaleSwitcher lang={lang} />
-            </div>
+            <a href={`/${lang}`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold cursor-pointer" onClick={() => setIsOpen(false)}>{t.home}</a>
+            <a href={`/${lang}/suites/suite-1`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold cursor-pointer" onClick={() => setIsOpen(false)}>{t.suitePalatino}</a>
+            <a href={`/${lang}/suites/suite-2`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold cursor-pointer" onClick={() => setIsOpen(false)}>{t.suiteAventino}</a>
+            <a href={`/${lang}/mappa`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold cursor-pointer" onClick={() => setIsOpen(false)}>{t.map}</a>
+            <a href={`/${lang}/contatti`} className="font-heading p-4 text-2xl border-b border-white/10 font-semibold cursor-pointer" onClick={() => setIsOpen(false)}>{t.contact}</a>
+            <LocaleSwitcher lang={lang} isMobile={true} />
           </div>
         )}
       </div>

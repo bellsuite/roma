@@ -92,10 +92,18 @@ export default async function SuitePage({
         <SuiteGallery media={media} name={suite.name} />
       </section>
 
-      <SuitesGeneralDescription />
-      <SuiteAmenities />
+      <SuitesGeneralDescription
+        p1={dict.suitesDetail.p1}
+        p2={dict.suitesDetail.p2}
+        p3={dict.suitesDetail.p3}
+      />
+      <SuiteAmenities amenities={dict.suitesAmenities} />
       <Separator />
-      <TiramisuVoucher />
+      <TiramisuVoucher
+        tiramisuTitle={dict.suitesDetail.tiramisuTitle}
+        tiramisuSubtitle={dict.suitesDetail.tiramisuSubtitle}
+        tiramisuAlt={dict.suitesDetail.tiramisuAlt}
+      />
       <PointsOfInterest lang={lang} />
     </main>
   );

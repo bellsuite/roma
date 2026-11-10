@@ -32,7 +32,10 @@
       "window": "Soundproof windows",
       "laundry": "Washing machine and dryer",
       "chair": "Double sofa bed"
-    }
+    },
+    "amenitiesTitle": "Some suite amenities:",
+    "testimonialsTitle": "Waking up in San Giovanni",
+    "testimonialsSubtitle": "Impressions of those who experienced Rome from these rooms"
   },
   "contatti": {
     "badge": "Bell Suites Rome",
@@ -74,7 +77,41 @@
   },
   "suitesDetail": {
     "title": "Roman suites with a taste of la dolce vita",
-    "notFound": "Suite not found"
+    "notFound": "Suite not found",
+    "p1": "Each suite offers a king-size bedroom, a cozy living room, a fully equipped kitchenette, and a private bathroom with a rain shower.",
+    "p2": "Perfect for leisure and business stays, the property guarantees modern comfort and premium services: high-speed Wi-Fi, self check-in, soundproof windows, espresso machine, air conditioning, and Smart TV. Complimentary breakfast voucher at Pompi, Rome's iconic pastry shop famous for its tiramisu.",
+    "p3": "Just 150 meters from Re di Roma metro (Line A), Bell Suites puts you steps away from the Colosseum, the Basilica of San Giovanni, and the city's main attractions. (Semi-basement floor, not serviced by an elevator, accessible via a short flight of stairs.)",
+    "tiramisuTitle": "Your stay includes breakfast at Pompi where you will taste Rome's best Tiramisu.",
+    "tiramisuSubtitle": "It is located a two-minute walk from your suite.",
+    "tiramisuAlt": "Breakfast at Pompi"
+  },
+  "suitesAmenities": {
+    "title": "All amenities:",
+    "col1": [
+      { "text": "Fully equipped kitchenette", "icon": "skillet_cooktop" },
+      { "text": "Refrigerator", "icon": "kitchen" },
+      { "text": "Espresso coffee machine", "icon": "coffee" },
+      { "text": "Electric kettle", "icon": "kettle" },
+      { "text": "Dining area", "icon": "restaurant" },
+      { "text": "Living room with double sofa bed", "icon": "chair" },
+      { "text": "Air conditioning and heating", "icon": "climate" }
+    ],
+    "col2": [
+      { "text": "Smart TV in the living room", "icon": "tv_displays" },
+      { "text": "Smart TV in the bedroom", "icon": "tv_displays" },
+      { "text": "Luxury shower with LED chromotherapy and rain effect", "icon": "shower" },
+      { "text": "Hairdryer", "icon": "airware" },
+      { "text": "Courtesy set / toiletries", "icon": "self_care" },
+      { "text": "Soundproof windows", "icon": "window_closed" }
+    ],
+    "col3": [
+      { "text": "Premium quality linens", "icon": "workspace_premium" },
+      { "text": "Family friendly property", "icon": "family_restroom" },
+      { "text": "Crib available upon request", "icon": "crib" },
+      { "text": "A breakfast voucher at Pompi included for each guest", "icon": "bakery_dining" },
+      { "text": "Non-smoking property throughout", "icon": "smoke_free" },
+      { "text": "Washing machine and dryer", "icon": "laundry" }
+    ]
   },
   "footer": {
     "suites": "Suites",

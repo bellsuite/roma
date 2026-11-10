@@ -32,7 +32,10 @@
       "window": "Finestre insonorizzate",
       "laundry": "Lavatrice e asciugatrice",
       "chair": "Divano letto matrimoniale"
-    }
+    },
+    "amenitiesTitle": "Alcune dotazioni della suite:",
+    "testimonialsTitle": "Svegliarsi a San Giovanni",
+    "testimonialsSubtitle": "Le impressioni di chi ha vissuto Roma da queste stanze"
   },
   "contatti": {
     "badge": "Bell Suites Roma",
@@ -74,7 +77,41 @@
   },
   "suitesDetail": {
     "title": "Suite romane con un assaggio di dolce vita",
-    "notFound": "Suite non trovata"
+    "notFound": "Suite non trovata",
+    "p1": "Ogni suite offre camera con letto king-size, soggiorno accogliente, angolo cottura attrezzato e bagno privato con doccia effetto pioggia.",
+    "p2": "Perfetta per soggiorni leisure e business, la struttura garantisce comfort moderno e servizi premium: Wi-Fi ad alta velocità, self check-in, finestre insonorizzate, macchina per espresso, aria condizionata e Smart TV. In omaggio, un voucher colazione presso Pompi, la pasticceria simbolo di Roma famosa per il suo tiramisù.",
+    "p3": "A soli 150 metri dalla metro Re di Roma (Linea A), Bell Suites ti mette a un passo dal Colosseo, dalla Basilica di San Giovanni e dalle principali attrazioni della città. (Piano seminterrato, non servito da ascensore, accessibile con breve rampa di scale.)",
+    "tiramisuTitle": "il tuo soggiorno include la colazione presso Pompi dove gusterete il miglior Tiramisù di Roma.",
+    "tiramisuSubtitle": "Si trova a due minuti a piedi dalla tua suite.",
+    "tiramisuAlt": "Colazione da Pompi"
+  },
+  "suitesAmenities": {
+    "title": "Tutte le dotazioni:",
+    "col1": [
+      { "text": "Angolo cottura completamente attrezzato", "icon": "skillet_cooktop" },
+      { "text": "Frigorifero", "icon": "kitchen" },
+      { "text": "Macchina per caffè espresso", "icon": "coffee" },
+      { "text": "Bollitore elettrico", "icon": "kettle" },
+      { "text": "Zona pranzo", "icon": "restaurant" },
+      { "text": "Soggiorno con divano letto matrimoniale", "icon": "chair" },
+      { "text": "Aria condizionata e riscaldamento", "icon": "climate" }
+    ],
+    "col2": [
+      { "text": "Smart TV nel soggiorno", "icon": "tv_displays" },
+      { "text": "Smart TV nella camera da letto", "icon": "tv_displays" },
+      { "text": "Doccia di lusso con cromoterapia LED e effetto pioggia", "icon": "shower" },
+      { "text": "Asciugacapelli", "icon": "airware" },
+      { "text": "Set di cortesia", "icon": "self_care" },
+      { "text": "Finestre insonorizzate", "icon": "window_closed" }
+    ],
+    "col3": [
+      { "text": "Biancheria di qualità premium", "icon": "workspace_premium" },
+      { "text": "Struttura adatta alle famiglie", "icon": "family_restroom" },
+      { "text": "Culla disponibile su richiesta", "icon": "crib" },
+      { "text": "Un voucher colazione presso Pompi incluso per ogni ospite", "icon": "bakery_dining" },
+      { "text": "Struttura interamente non fumatori", "icon": "smoke_free" },
+      { "text": "Lavatrice e asciugatrice", "icon": "laundry" }
+    ]
   },
   "footer": {
     "suites": "Le Suite",

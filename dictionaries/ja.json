@@ -32,7 +32,10 @@
       "window": "防音窓",
       "laundry": "洗濯乾燥機",
       "chair": "ダブルソファベッド"
-    }
+    },
+    "amenitiesTitle": "スイートの一部設備：",
+    "testimonialsTitle": "サン・ジョヴァンニで目覚める",
+    "testimonialsSubtitle": "これらの部屋からローマを体験した人々の感想"
   },
   "contatti": {
     "badge": "ベル・スィーツ・ローマ",
@@ -74,7 +77,41 @@
   },
   "suitesDetail": {
     "title": "甘い生活（ドルチェ・ヴィータ）の味わいを感じるローマのスイート",
-    "notFound": "スイートが見つかりません"
+    "notFound": "スイートが見つかりません",
+    "p1": "各スイートには、キングサイズベッドルーム、居心地の良いリビングルーム、設備の整った簡易キッチン、レインシャワー付きの専用バスルームが備わっています。",
+    "p2": "レジャーにもビジネスにも最適な当施設は、高速Wi-Fi、セルフチェックイン、防音窓、エスプレッソマシン、エアコン、スマートTVなどのモダンな快適性とプレミアムなサービスを提供します。ローマの象徴でありティラミスで有名な老舗菓子店「ポンプ（Pompi）」の朝食バウチャーをプレゼント。",
+    "p3": "地下鉄レ・ディ・ローマ駅（A線）からわずか150mのベル・スィーツ・ローマは、コロッセオ、サン・ジョヴァンニ大聖堂、市内の主要観光スポットへのアクセスが抜群です。（半地下階、エレベーターなし、短い階段でアクセス可能。）",
+    "tiramisuTitle": "ローマで最高のティラミスが味わえる「ポンプ（Pompi）」での朝食がご宿泊に含まれています。",
+    "tiramisuSubtitle": "スイートから徒歩2分の場所にあります。",
+    "tiramisuAlt": "ポンプでの朝食"
+  },
+  "suitesAmenities": {
+    "title": "すべての設備：",
+    "col1": [
+      { "text": "設備の整った簡易キッチン", "icon": "skillet_cooktop" },
+      { "text": "冷蔵庫", "icon": "kitchen" },
+      { "text": "エスプレッソマシン", "icon": "coffee" },
+      { "text": "電気ケトル", "icon": "kettle" },
+      { "text": "ダイニングエリア", "icon": "restaurant" },
+      { "text": "ダブルソファベッド付きリビングルーム", "icon": "chair" },
+      { "text": "エアコン・暖房完備", "icon": "climate" }
+    ],
+    "col2": [
+      { "text": "リビングルームのスマートTV", "icon": "tv_displays" },
+      { "text": "ベッドルームのスマートTV", "icon": "tv_displays" },
+      { "text": "LEDクロモセラピー＆レイン効果付き高級シャワー", "icon": "shower" },
+      { "text": "ヘアドライヤー", "icon": "airware" },
+      { "text": "アメニティセット", "icon": "self_care" },
+      { "text": "防音窓", "icon": "window_closed" }
+    ],
+    "col3": [
+      { "text": "プレミアム品質のリネン", "icon": "workspace_premium" },
+      { "text": "ファミリー向け施設", "icon": "family_restroom" },
+      { "text": "リクエストに応じてベビーベッド利用可能", "icon": "crib" },
+      { "text": "ご宿泊者全員にポンプ（Pompi）の朝食バウチャー付き", "icon": "bakery_dining" },
+      { "text": "全館禁煙", "icon": "smoke_free" },
+      { "text": "洗濯乾燥機", "icon": "laundry" }
+    ]
   },
   "footer": {
     "suites": "スイート",
