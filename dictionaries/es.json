@@ -32,7 +32,10 @@
       "window": "Ventanas insonorizadas",
       "laundry": "Lavadora y secadora",
       "chair": "Sofá cama doble"
-    }
+    },
+    "amenitiesTitle": "Algunas comodidades de la suite:",
+    "testimonialsTitle": "Despertar en San Giovanni",
+    "testimonialsSubtitle": "Impresiones de quienes han vivido Roma desde estas habitaciones"
   },
   "contatti": {
     "badge": "Bell Suites Roma",
@@ -74,7 +77,41 @@
   },
   "suitesDetail": {
     "title": "Suites romanas con un toque de dolce vita",
-    "notFound": "Suite no encontrada"
+    "notFound": "Suite no encontrada",
+    "p1": "Cada suite ofrece un dormitorio con cama king-size, una sala de estar acogedora, una cocina americana equipada y un baño privado con ducha efecto lluvia.",
+    "p2": "Perfecta para estancias de ocio y negocios, la propiedad garantiza comodidad moderna y servicios prémium: Wi-Fi ad alta velocidad, self check-in, ventanas insonorizadas, cafetera espresso, aire acondicionado y Smart TV. De regalo, un vale de desayuno en Pompi, la pasticceria símbolo de Roma famosa por su tiramisú.",
+    "p3": "A solo 150 metros del metro Re di Roma (Línea A), Bell Suites te sitúa a un paso del Coliseo, la Basílica de San Giovanni y las principales atracciones de la ciudad. (Planta semisótano, sin ascensor, accesible mediante un corto tramo de escaleras.)",
+    "tiramisuTitle": "Tu estancia incluye el desayuno en Pompi, donde degustarás el mejor tiramisú de Roma.",
+    "tiramisuSubtitle": "Se encuentra a dos minutos a pie de tu suite.",
+    "tiramisuAlt": "Desayuno en Pompi"
+  },
+  "suitesAmenities": {
+    "title": "Todas las comodidades:",
+    "col1": [
+      { "text": "Cocina americana totalmente equipada", "icon": "skillet_cooktop" },
+      { "text": "Nevera", "icon": "kitchen" },
+      { "text": "Cafetera espresso", "icon": "coffee" },
+      { "text": "Hervidor eléctrico", "icon": "kettle" },
+      { "text": "Comedor", "icon": "restaurant" },
+      { "text": "Salón con sofá cama doble", "icon": "chair" },
+      { "text": "Aire acondicionado y calefacción", "icon": "climate" }
+    ],
+    "col2": [
+      { "text": "Smart TV en el salón", "icon": "tv_displays" },
+      { "text": "Smart TV en el dormitorio", "icon": "tv_displays" },
+      { "text": "Ducha de lujo con cromoterapia LED y efecto lluvia", "icon": "shower" },
+      { "text": "Secador de pelo", "icon": "airware" },
+      { "text": "Set de cortesía", "icon": "self_care" },
+      { "text": "Ventanas insonorizadas", "icon": "window_closed" }
+    ],
+    "col3": [
+      { "text": "Ropa de cama de calidad prémium", "icon": "workspace_premium" },
+      { "text": "Alojamiento apto para familias", "icon": "family_restroom" },
+      { "text": "Cuna disponible bajo petición", "icon": "crib" },
+      { "text": "Un vale de desayuno en Pompi incluido para cada huésped", "icon": "bakery_dining" },
+      { "text": "Alojamiento para no fumadores", "icon": "smoke_free" },
+      { "text": "Lavadora y secadora", "icon": "laundry" }
+    ]
   },
   "footer": {
     "suites": "Suites",

@@ -32,7 +32,10 @@
       "window": "隔音窗户",
       "laundry": "洗衣机与烘干机",
       "chair": "双人沙发床"
-    }
+    },
+    "amenitiesTitle": "套房的部分设施：",
+    "testimonialsTitle": "在圣乔瓦尼醒来",
+    "testimonialsSubtitle": "体验过这些罗马房间客人的印象"
   },
   "contatti": {
     "badge": "罗马贝尔套房",
@@ -74,7 +77,41 @@
   },
   "suitesDetail": {
     "title": "带有甜蜜生活风情的罗马套房",
-    "notFound": "未找到套房"
+    "notFound": "未找到套房",
+    "p1": "每间套房均设有一间大床卧室、温馨的起居室、配有设施的厨房以及带花洒淋浴的私人浴室。",
+    "p2": "无论是休闲还是商务旅行，该物业都保证提供现代舒适设施和优质服务：高速Wi-Fi、自助入住、隔音窗户、浓缩咖啡机、空调和智能电视。赠送 Pompi 早餐券，Pompi 是罗马标志性的甜品店，以其提拉米苏闻名。",
+    "p3": "Bell Suites 距离 Re di Roma 地铁站（A线）仅150米，距离斗兽场、圣若望大殿和城市主要景点仅几步之遥。（半地下室，无电梯，通过短段楼梯进入。）",
+    "tiramisuTitle": "您的入住包含在 Pompi 的早餐，在那里您可以品尝到罗马最好的提拉米苏。",
+    "tiramisuSubtitle": "距离您的套房仅两分钟步行路程。",
+    "tiramisuAlt": "Pompi 早餐"
+  },
+  "suitesAmenities": {
+    "title": "所有设施：",
+    "col1": [
+      { "text": "配备齐全的厨房", "icon": "skillet_cooktop" },
+      { "text": "冰箱", "icon": "kitchen" },
+      { "text": "浓缩咖啡机", "icon": "coffee" },
+      { "text": "电热水壶", "icon": "kettle" },
+      { "text": "用餐区", "icon": "restaurant" },
+      { "text": "带双人沙发床的起居室", "icon": "chair" },
+      { "text": "空调与暖气", "icon": "climate" }
+    ],
+    "col2": [
+      { "text": "起居室智能电视", "icon": "tv_displays" },
+      { "text": "卧室智能电视", "icon": "tv_displays" },
+      { "text": "带LED光疗和雨淋效果的豪华淋浴间", "icon": "shower" },
+      { "text": "吹风机", "icon": "airware" },
+      { "text": "洗漱用品", "icon": "self_care" },
+      { "text": "隔音窗户", "icon": "window_closed" }
+    ],
+    "col3": [
+      { "text": "优质床上用品", "icon": "workspace_premium" },
+      { "text": "适合家庭入住", "icon": "family_restroom" },
+      { "text": "可应要求提供婴儿床", "icon": "crib" },
+      { "text": "每位客人都可享受 Pompi 早餐券", "icon": "bakery_dining" },
+      { "text": "全面禁烟", "icon": "smoke_free" },
+      { "text": "洗衣机与烘干机", "icon": "laundry" }
+    ]
   },
   "footer": {
     "suites": "套房",

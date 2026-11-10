@@ -32,7 +32,10 @@
       "window": "Fenêtres insonorisées",
       "laundry": "Lave-linge et sèche-linge",
       "chair": "Canapé-lit double"
-    }
+    },
+    "amenitiesTitle": "Quelques équipements de la suite :",
+    "testimonialsTitle": "Se réveiller à San Giovanni",
+    "testimonialsSubtitle": "Les impressions de ceux qui ont vécu Rome depuis ces chambres"
   },
   "contatti": {
     "badge": "Bell Suites Rome",
@@ -74,7 +77,41 @@
   },
   "suitesDetail": {
     "title": "Suites romaines avec un avant-goût de dolce vita",
-    "notFound": "Suite non trouvée"
+    "notFound": "Suite non trouvée",
+    "p1": "Chaque suite offre une chambre avec lit king-size, un salon chaleureux, une kitchenette équipée et une salle de bains privative avec douche à effet pluie.",
+    "p2": "Parfaite pour les séjours de loisirs et d'affaires, la structure garantit un confort moderne et des services haut de gamme : Wi-Fi haut débit, self check-in, fenêtres insonorisées, machine à espresso, climatisation et Smart TV. Offert : un bon pour le petit-déjeuner chez Pompi, la pâtisserie symbole de Rome célèbre pour son tiramisu.",
+    "p3": "À seulement 150 mètres du métro Re di Roma (Ligne A), Bell Suites vous place à deux pas du Colisée, de la Basilique Saint-Jean-de-Latran et des principales attractions de la ville. (Étage semi-enterré, sans ascenseur, accessible par une courte série de marches.)",
+    "tiramisuTitle": "Votre séjour comprend le petit-déjeuner chez Pompi où vous goûterez le meilleur tiramisu de Rome.",
+    "tiramisuSubtitle": "Il est situé à deux minutes à pied de votre suite.",
+    "tiramisuAlt": "Petit-déjeuner chez Pompi"
+  },
+  "suitesAmenities": {
+    "title": "Tous les équipements :",
+    "col1": [
+      { "text": "Kitchenette entièrement équipée", "icon": "skillet_cooktop" },
+      { "text": "Réfrigérateur", "icon": "kitchen" },
+      { "text": "Machine à café espresso", "icon": "coffee" },
+      { "text": "Bouilloire électrique", "icon": "kettle" },
+      { "text": "Coin repas", "icon": "restaurant" },
+      { "text": "Salon avec canapé-lit double", "icon": "chair" },
+      { "text": "Climatisation et chauffage", "icon": "climate" }
+    ],
+    "col2": [
+      { "text": "Smart TV dans le salon", "icon": "tv_displays" },
+      { "text": "Smart TV dans la chambre", "icon": "tv_displays" },
+      { "text": "Douche de luxe avec chromothérapie LED et effet pluie", "icon": "shower" },
+      { "text": "Sèche-cheveux", "icon": "airware" },
+      { "text": "Produits d'accueil", "icon": "self_care" },
+      { "text": "Fenêtres insonorisées", "icon": "window_closed" }
+    ],
+    "col3": [
+      { "text": "Linge de qualité supérieure", "icon": "workspace_premium" },
+      { "text": "Établissement adapté aux familles", "icon": "family_restroom" },
+      { "text": "Lit bébé disponible sur demande", "icon": "crib" },
+      { "text": "Un bon pour le petit-déjeuner chez Pompi inclus pour chaque invité", "icon": "bakery_dining" },
+      { "text": "Établissement non-fumeur", "icon": "smoke_free" },
+      { "text": "Lave-linge et sèche-linge", "icon": "laundry" }
+    ]
   },
   "footer": {
     "suites": "Suites",

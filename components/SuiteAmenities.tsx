@@ -1,6 +1,20 @@
 import FeatureIcon from "./icons/FeatureIcon";
 
-const columns = [
+export interface AmenityItem {
+  text: string;
+  icon: string;
+}
+
+export interface SuiteAmenitiesProps {
+  amenities?: {
+    title?: string;
+    col1?: AmenityItem[];
+    col2?: AmenityItem[];
+    col3?: AmenityItem[];
+  };
+}
+
+const defaultColumns = [
   [
     { text: "Angolo cottura completamente attrezzato", icon: "skillet_cooktop" },
     { text: "Frigorifero", icon: "kitchen" },
@@ -29,11 +43,18 @@ const columns = [
   ],
 ];
 
-export default function SuiteAmenities() {
+export default function SuiteAmenities({ amenities }: SuiteAmenitiesProps) {
+  const title = amenities?.title || "Tutte le dotazioni:";
+  const columns = [
+    amenities?.col1 || defaultColumns[0],
+    amenities?.col2 || defaultColumns[1],
+    amenities?.col3 || defaultColumns[2],
+  ];
+
   return (
     <section className="px-padding-global bg-bianco">
       <div className="max-w-container-large mx-auto pt-16">
-        <h2 className="font-heading text-4xl text-blu mb-12 text-center">Tutte le dotazioni:</h2>
+        <h2 className="font-heading text-4xl text-blu mb-12 text-center">{title}</h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-0 lg:gap-y-12">
           {columns.map((column, colIndex) => (
             <div key={colIndex} className="flex flex-col gap-6 py-3">

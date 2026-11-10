@@ -32,6 +32,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         suitePath={`/${lang}/suites/suite-1`}
         discoverText={dict.home.discover}
         bookText={dict.home.book}
+        amenitiesTitle={dict.home.amenitiesTitle}
       />
       <Separator />
       <TextWithImageLeft
@@ -52,9 +53,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         suitePath={`/${lang}/suites/suite-2`}
         discoverText={dict.home.discover}
         bookText={dict.home.book}
+        amenitiesTitle={dict.home.amenitiesTitle}
       />
       <Separator />
-      <Testimonials />
+      <Testimonials
+        title={dict.home.testimonialsTitle}
+        subtitle={dict.home.testimonialsSubtitle}
+      />
     </main>
   );
 }
