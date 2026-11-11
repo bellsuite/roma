@@ -53,11 +53,19 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
               <div className="mb-6">
                 <a
                   href="tel:+39 3920261228"
-                  className="text-2xl font-heading text-blu hover:text-oro-scuro transition-colors block mb-2"
+                  className="text-2xl font-heading text-blu hover:text-oro-scuro transition-colors block mb-1 cursor-pointer"
                 >
                   +39 3920261228
                 </a>
-                <p className="text-xs text-grigio">{c.whatsapp}</p>
+                <p className="text-xs text-grigio mb-4">{c.whatsapp}</p>
+
+                <a
+                  href="mailto:info@bellsuites.it"
+                  className="text-xl font-heading text-blu hover:text-oro-scuro transition-colors block mb-1 cursor-pointer"
+                >
+                  info@bellsuites.it
+                </a>
+                <p className="text-xs text-grigio">{c.emailLabel}</p>
               </div>
             </div>
             <div className="pt-4 border-t border-grigio-chiarissimo flex gap-4">
