@@ -104,24 +104,24 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 border border-oro/30 rounded-lg bg-bianco">
-              <div className="text-3xl mb-4">⏰</div>
+            <div className="p-6 border border-oro/30 rounded-lg bg-bianco flex flex-col items-center">
+              <div className="text-3xl mb-4 text-blu">⏰</div>
               <h3 className="font-heading text-xl text-blu mb-2">{c.t1Title}</h3>
               <p className="text-grigio-scuro text-sm leading-relaxed">
                 {c.t1Desc}
               </p>
             </div>
 
-            <div className="p-6 border border-oro/30 rounded-lg bg-bianco">
-              <div className="text-3xl mb-4">🪪</div>
+            <div className="p-6 border border-oro/30 rounded-lg bg-bianco flex flex-col items-center">
+              <div className="text-3xl mb-4 text-blu">🪪</div>
               <h3 className="font-heading text-xl text-blu mb-2">{c.t2Title}</h3>
               <p className="text-grigio-scuro text-sm leading-relaxed">
                 {c.t2Desc}
               </p>
             </div>
 
-            <div className="p-6 border border-oro/30 rounded-lg bg-bianco">
-              <div className="text-3xl mb-4">🥐</div>
+            <div className="p-6 border border-oro/30 rounded-lg bg-bianco flex flex-col items-center">
+              <div className="text-3xl mb-4 text-blu">🥐</div>
               <h3 className="font-heading text-xl text-blu mb-2">{c.t3Title}</h3>
               <p className="text-grigio-scuro text-sm leading-relaxed">
                 {c.t3Desc}
