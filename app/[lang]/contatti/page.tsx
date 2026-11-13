@@ -32,13 +32,15 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
               <p className="text-grigio-scuro mb-6 leading-relaxed whitespace-pre-line">
                 {c.addressText}
               </p>
-              <Image
-                src="/banner-indirizzo.avif"
-                alt="Banner Indirizzo"
-                width={500}
-                height={300}
-                className="mb-4"
-              />
+              <a href={`/${lang}/mappa`}>
+                <Image
+                  src="/banner-indirizzo.avif"
+                  alt="Banner Indirizzo"
+                  width={500}
+                  height={300}
+                  className="mb-4 cursor-pointer"
+                />
+              </a>
             </div>
             <a
               href={`/${lang}/mappa`}
