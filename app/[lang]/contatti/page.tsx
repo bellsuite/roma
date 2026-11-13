@@ -1,5 +1,6 @@
 import Separator from "@/components/Separator";
 import { getDictionary } from "@/app/dictionaries";
+import Image from 'next/image';
 
 export default async function ContattiPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -31,6 +32,13 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
               <p className="text-grigio-scuro mb-6 leading-relaxed whitespace-pre-line">
                 {c.addressText}
               </p>
+              <Image
+                src="/banner-indirizzo.avif"
+                alt="Banner Indirizzo"
+                width={500}
+                height={300}
+                className="mb-4"
+              />
             </div>
             <a
               href={`/${lang}/mappa`}
