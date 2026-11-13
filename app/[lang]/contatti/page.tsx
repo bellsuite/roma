@@ -1,5 +1,6 @@
 import Separator from "@/components/Separator";
 import { getDictionary } from "@/app/dictionaries";
+import Image from 'next/image';
 
 export default async function ContattiPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -13,7 +14,7 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
         <div className="max-w-container-medium mx-auto text-center">
           <p className="font-heading text-xl text-oro-chiaro mb-3">{c.badge}</p>
           <h1 className="font-heading text-4xl md:text-6xl mb-6">{c.title}</h1>
-          <p className="text-bianco/80 text-lg max-w-2xl mx-auto">{c.subtitle}</p>
+          <p className="text-bianco text-lg max-w-2xl mx-auto">{c.subtitle}</p>
         </div>
       </section>
 
@@ -22,7 +23,7 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
         <div className="max-w-container-medium mx-auto grid md:grid-cols-2 gap-12">
 
           {/* Card 1: Dove Siamo & Indirizzo */}
-          <div className="border border-oro/40 p-8 rounded-lg bg-bianco shadow-sm flex flex-col justify-between">
+          <div className="border border-oro p-8 rounded-lg bg-bianco shadow-sm flex flex-col justify-between">
             <div>
               <h2 className="font-heading text-2xl text-blu mb-4">{c.addressTitle}</h2>
               <p className="text-grigio-scuro text-lg mb-4 font-semibold">
@@ -31,6 +32,15 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
               <p className="text-grigio-scuro mb-6 leading-relaxed whitespace-pre-line">
                 {c.addressText}
               </p>
+              <a href={`/${lang}/mappa`}>
+                <Image
+                  src="/banner-indirizzo.avif"
+                  alt="Banner Indirizzo"
+                  width={500}
+                  height={300}
+                  className="mb-4 cursor-pointer"
+                />
+              </a>
             </div>
             <a
               href={`/${lang}/mappa`}
@@ -41,7 +51,7 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
           </div>
 
           {/* Card 2: Contatti Diretti & Host */}
-          <div className="border border-oro/40 p-8 rounded-lg bg-bianco shadow-sm flex flex-col justify-between">
+          <div className="border border-oro p-8 rounded-lg bg-bianco shadow-sm flex flex-col justify-between">
             <div>
               <h2 className="font-heading text-2xl text-blu mb-4">{c.hostTitle}</h2>
               <p className="text-grigio-scuro mb-2">
@@ -94,24 +104,24 @@ export default async function ContattiPage({ params }: { params: Promise<{ lang:
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 border border-oro/30 rounded-lg bg-bianco">
-              <div className="text-3xl mb-4">⏰</div>
+            <div className="p-6 border border-oro rounded-lg bg-bianco flex flex-col items-center">
+              <div className="text-3xl mb-4" style={{ filter: 'grayscale(100%) sepia(50%) brightness(100%) hue-rotate(172deg) saturate(60%)' }}>⏰</div>
               <h3 className="font-heading text-xl text-blu mb-2">{c.t1Title}</h3>
               <p className="text-grigio-scuro text-sm leading-relaxed">
                 {c.t1Desc}
               </p>
             </div>
 
-            <div className="p-6 border border-oro/30 rounded-lg bg-bianco">
-              <div className="text-3xl mb-4">🪪</div>
+            <div className="p-6 border border-oro rounded-lg bg-bianco flex flex-col items-center">
+              <div className="text-3xl mb-4" style={{ filter: 'grayscale(100%) sepia(50%) brightness(100%) hue-rotate(172deg) saturate(60%)' }}>🪪</div>
               <h3 className="font-heading text-xl text-blu mb-2">{c.t2Title}</h3>
               <p className="text-grigio-scuro text-sm leading-relaxed">
                 {c.t2Desc}
               </p>
             </div>
 
-            <div className="p-6 border border-oro/30 rounded-lg bg-bianco">
-              <div className="text-3xl mb-4">🥐</div>
+            <div className="p-6 border border-oro rounded-lg bg-bianco flex flex-col items-center">
+              <div className="text-3xl mb-4" style={{ filter: 'grayscale(100%) sepia(50%) brightness(100%) hue-rotate(172deg) saturate(60%)' }}>🥐</div>
               <h3 className="font-heading text-xl text-blu mb-2">{c.t3Title}</h3>
               <p className="text-grigio-scuro text-sm leading-relaxed">
                 {c.t3Desc}
