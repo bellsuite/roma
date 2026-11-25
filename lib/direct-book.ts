@@ -16,6 +16,7 @@ const ROOM_TYPES: Record<string, string> = {
 
 const MIN_NIGHTS = 2;
 const ADULTS = 1;
+const TOURIST_TAX = 12; // 12 EUR tassa di soggiorno
 
 function fmt(d: Date): string {
   const y = d.getFullYear();
@@ -61,9 +62,10 @@ export async function getFirstAvailablePrice(
     const data = await response.json();
 
     if (!data || !Array.isArray(data.result) || data.result.length === 0) {
+      const baseFallback = roomTypeId === "514330" ? 220 : 260;
       return {
         available: false,
-        totalPrice: roomTypeId === "514330" ? 220 : 260,
+        totalPrice: baseFallback + TOURIST_TAX,
         currency: "EUR",
         minNights: MIN_NIGHTS,
         date: fmt(from),
@@ -81,12 +83,13 @@ export async function getFirstAvailablePrice(
     );
 
     const targetItem = firstValid || data.result[0];
-    const totalPrice =
+    const basePrice =
       targetItem && typeof targetItem.price === "number"
         ? targetItem.price
         : roomTypeId === "514330"
         ? 220
         : 260;
+    const totalPrice = basePrice + TOURIST_TAX;
     const dateStr = targetItem && targetItem.date ? targetItem.date : fmt(from);
 
     return {
@@ -98,9 +101,10 @@ export async function getFirstAvailablePrice(
     };
   } catch (error) {
     console.error(`Errore prezzo ${propertyId}:`, error);
+    const baseFallback = roomTypeId === "514330" ? 220 : 260;
     return {
       available: false,
-      totalPrice: roomTypeId === "514330" ? 220 : 260,
+      totalPrice: baseFallback + TOURIST_TAX,
       currency: "EUR",
       minNights: MIN_NIGHTS,
       date: fmt(new Date()),
