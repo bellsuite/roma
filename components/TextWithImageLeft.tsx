@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FeatureIcon from "./icons/FeatureIcon";
+import DynamicPrice from "./DynamicPrice";
 
 export default function TextWithImageLeft({
   title,
@@ -12,6 +13,7 @@ export default function TextWithImageLeft({
   discoverText = "Scopri",
   bookText = "Prenota",
   amenitiesTitle = "Alcune dotazioni della suite:",
+  propertyId = "bellsuitesromesangiovanni",
 }: {
   title: string;
   price: string;
@@ -23,6 +25,7 @@ export default function TextWithImageLeft({
   discoverText?: string;
   bookText?: string;
   amenitiesTitle?: string;
+  propertyId?: string;
 }) {
   return (
     <section className="px-padding-global bg-bianco">
@@ -43,15 +46,17 @@ export default function TextWithImageLeft({
           </div>
 
           {/* Mobile Price (Mobile: order-3) */}
-          <div className="w-full md:hidden order-3">
-            <h3 className="font-heading text-2xl text-blu mb-6 w-full text-left">{price}</h3>
+          <div className="w-full md:hidden order-3 mb-4">
+            <DynamicPrice defaultPriceText={price} propertyId={propertyId} />
           </div>
 
           {/* Content (Desktop: Right, Mobile: order-4) */}
           <div className="flex-1 order-4 md:order-2">
             {/* Desktop Title & Price */}
             <h2 className="hidden md:block font-heading text-5xl text-blu mb-6">{title}</h2>
-            <h3 className="hidden md:block font-heading text-3xl text-blu mb-6">{price}</h3>
+            <div className="hidden md:block mb-6">
+              <DynamicPrice defaultPriceText={price} propertyId={propertyId} />
+            </div>
 
             <p className="text-grigio-scuro mb-6 text-base">{description}</p>
 

@@ -17,6 +17,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         priority
         title={dict.home.palatinoTitle}
         price={dict.home.price}
+        propertyId="palatino"
         description={dict.home.palatinoDesc}
         features={[
           { text: dict.home.features.shower, icon: "shower" },
@@ -38,6 +39,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <TextWithImageLeft
         title={dict.home.aventinoTitle}
         price={dict.home.price}
+        propertyId="aventino"
         description={dict.home.aventinoDesc}
         features={[
           { text: dict.home.features.shower, icon: "shower" },
